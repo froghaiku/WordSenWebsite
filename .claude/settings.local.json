@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(gem install:*)"
+      "Bash(gem install:*)",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []

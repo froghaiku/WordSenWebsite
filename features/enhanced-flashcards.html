@@ -1,0 +1,265 @@
+---
+layout: default
+title: Enhanced Flashcards
+description: Smart flashcards that adapt to your learning pace with spaced repetition and contextual learning.
+permalink: /features/enhanced-flashcards/
+---
+
+<section class="feature-header">
+    <div class="container">
+        <div class="section-header">
+            <h1>Enhanced Flashcards</h1>
+            <p>Smart learning that adapts to you</p>
+        </div>
+    </div>
+</section>
+
+<section class="feature-content">
+    <div class="container">
+        <div class="feature-grid">
+            <div class="feature-text">
+                <h2>Beyond Traditional Flashcards</h2>
+                <p>WordSen's enhanced flashcards use <strong>intelligent spaced repetition</strong> to show you exactly the right word at exactly the right time. No more endless drilling – just efficient, personalized learning.</p>
+                
+                <h3>Smart Timing Algorithm</h3>
+                <p>Our algorithm learns from your performance and adjusts review timing:</p>
+                <ul class="feature-list">
+                    <li>Words you struggle with appear more frequently</li>
+                    <li>Mastered words space out automatically</li>
+                    <li>Reviews happen just before you'd forget</li>
+                    <li>Optimal learning efficiency without burnout</li>
+                </ul>
+                
+                <h3>Rich Context, Not Just Translation</h3>
+                <p>Each card includes:</p>
+                <ul class="feature-list">
+                    <li>Multiple example sentences in natural Japanese</li>
+                    <li>Audio pronunciation by native speakers</li>
+                    <li>Visual memory aids and mnemonics</li>
+                    <li>Related words and kanji connections</li>
+                    <li>Cultural context when relevant</li>
+                </ul>
+                
+                <h3>Multiple Learning Modes</h3>
+                <p>Practice the way that works best for you:</p>
+                <ul class="feature-list">
+                    <li>Recognition: Japanese → English</li>
+                    <li>Production: English → Japanese</li>
+                    <li>Listening: Audio-only challenges</li>
+                    <li>Writing: Practice hiragana, katakana, and kanji</li>
+                </ul>
+                
+                <div class="feature-cta">
+                    <a href="#" class="btn btn-primary btn-large">Experience Smart Flashcards</a>
+                </div>
+            </div>
+            
+            <div class="feature-visual">
+                <div class="flashcard-demo">
+                    <div class="flashcard">
+                        <div class="flashcard-front">
+                            <div class="japanese-word">食べる</div>
+                            <div class="reading">たべる</div>
+                            <div class="audio-button">🔊</div>
+                        </div>
+                        <div class="flashcard-context">
+                            <div class="example">「寿司を食べたいです」</div>
+                            <div class="translation">"I want to eat sushi"</div>
+                        </div>
+                    </div>
+                    
+                    <div class="srs-indicator">
+                        <h4>Spaced Repetition Status</h4>
+                        <div class="srs-levels">
+                            <div class="srs-level active">New</div>
+                            <div class="srs-level active">Learning</div>
+                            <div class="srs-level active">Familiar</div>
+                            <div class="srs-level">Mastered</div>
+                        </div>
+                        <div class="next-review">Next review: 2 hours</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.feature-header {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    padding: 8rem 0 4rem;
+    text-align: center;
+}
+
+.feature-content {
+    padding: 4rem 0;
+    background: var(--light-bg);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.feature-text h2 {
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.feature-text h3 {
+    color: var(--text-dark);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.feature-text p {
+    color: var(--text-medium);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.feature-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-medium);
+}
+
+.feature-list li::before {
+    content: '⚡';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+.feature-cta {
+    margin-top: 3rem;
+}
+
+.flashcard-demo {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.flashcard {
+    background: var(--card-bg);
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.japanese-word {
+    font-size: 3rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+}
+
+.reading {
+    font-size: 1.25rem;
+    color: var(--text-medium);
+    margin-bottom: 1rem;
+}
+
+.audio-button {
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.audio-button:hover {
+    opacity: 1;
+}
+
+.flashcard-context {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.example {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.translation {
+    color: var(--text-medium);
+    font-style: italic;
+}
+
+.srs-indicator h4 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.srs-levels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.srs-level {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: #f1f5f9;
+    color: var(--text-light);
+    flex: 1;
+    text-align: center;
+    margin: 0 0.25rem;
+}
+
+.srs-level.active {
+    background: var(--accent-color);
+    color: white;
+}
+
+.next-review {
+    text-align: center;
+    color: var(--text-medium);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .feature-header {
+        padding: 6rem 0 3rem;
+    }
+    
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .flashcard-demo {
+        padding: 2rem;
+    }
+    
+    .japanese-word {
+        font-size: 2.5rem;
+    }
+    
+    .srs-levels {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+</style>

@@ -9,8 +9,19 @@
             
             <div class="nav-menu" id="nav-menu">
                 <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a>
-                <a href="{{ '/blog/' | relative_url }}" class="nav-link {% if page.url contains 'blog' %}active{% endif %}">Dev Blog</a>
+                
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle {% if page.url contains 'features' %}active{% endif %}">Features <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-content">
+                        <a href="{{ '/features/why-1000-words/' | relative_url }}" class="dropdown-link">Why 1,000 Words?</a>
+                        <a href="{{ '/features/enhanced-flashcards/' | relative_url }}" class="dropdown-link">Enhanced Flashcards</a>
+                        <a href="{{ '/features/easy-adding-cards/' | relative_url }}" class="dropdown-link">Easy Adding Cards</a>
+                        <a href="{{ '/features/motivational-pet/' | relative_url }}" class="dropdown-link">Motivational Pet</a>
+                    </div>
+                </div>
+                
                 <a href="{{ '/roadmap/' | relative_url }}" class="nav-link {% if page.url == '/roadmap/' %}active{% endif %}">Roadmap</a>
+                <a href="{{ '/blog/' | relative_url }}" class="nav-link {% if page.url contains 'blog' %}active{% endif %}">Dev Blog</a>
                 <a href="{{ '/contact/' | relative_url }}" class="nav-link {% if page.url == '/contact/' %}active{% endif %}">Contact</a>
                 <a href="#" class="nav-cta">Join Beta</a>
             </div>

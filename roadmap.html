@@ -19,7 +19,6 @@ permalink: /roadmap/
         <div class="roadmap-nav">
             <a href="#recent-updates" class="roadmap-nav-link active">Recent Updates</a>
             <a href="#coming-soon" class="roadmap-nav-link">Coming Soon</a>
-            <a href="#request-feature" class="roadmap-nav-link">Request Feature</a>
         </div>
 
         <!-- Recent Updates Section -->
@@ -91,75 +90,6 @@ permalink: /roadmap/
             </div>
         </div>
 
-        <!-- Request Feature Section -->
-        <div id="request-feature" class="roadmap-section">
-            <div class="section-header">
-                <h2>Request a Feature</h2>
-                <p>Have an idea that would make WordSen better? I'd love to hear it!</p>
-            </div>
-            
-            <div class="feature-request-content">
-                <div class="feature-request-form">
-                    <form class="contact-form" action="https://formspree.io/f/ben@wordsen.com" method="POST">
-                        <div class="form-group">
-                            <label for="requester-name">Your Name</label>
-                            <input type="text" id="requester-name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="requester-email">Email (optional)</label>
-                            <input type="email" id="requester-email" name="email">
-                            <small>I'll only use this to follow up on your suggestion</small>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="feature-title">Feature Title</label>
-                            <input type="text" id="feature-title" name="feature-title" placeholder="e.g., Audio pronunciation practice" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="feature-description">Description</label>
-                            <textarea id="feature-description" name="feature-description" rows="4" 
-                                placeholder="Describe your feature idea. What problem would it solve? How would it work?" required></textarea>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="feature-priority">How important is this to you?</label>
-                            <select id="feature-priority" name="priority">
-                                <option value="nice-to-have">Nice to have</option>
-                                <option value="would-be-helpful">Would be helpful</option>
-                                <option value="really-want">Really want this!</option>
-                                <option value="game-changer">Game changer!</option>
-                            </select>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-large">Submit Feature Request</button>
-                        <input type="hidden" name="_subject" value="Feature Request from WordSen Roadmap">
-                        <input type="hidden" name="_next" value="{{ site.url }}/roadmap/?request=success">
-                    </form>
-                </div>
-                
-                <div class="feature-request-info">
-                    <div class="info-card">
-                        <h4>💡 What makes a great feature request?</h4>
-                        <ul>
-                            <li><strong>Clear problem:</strong> What specific issue does this solve?</li>
-                            <li><strong>User benefit:</strong> How would this help you learn better?</li>
-                            <li><strong>Context:</strong> When/where would you use this feature?</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="info-card">
-                        <h4>🚀 What happens next?</h4>
-                        <ul>
-                            <li>I review all feature requests personally</li>
-                            <li>Popular ideas get prioritized in development</li>
-                            <li>I'll email you when your feature ships!</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 
@@ -383,47 +313,6 @@ permalink: /roadmap/
     color: var(--accent-color);
 }
 
-/* Feature Request Section */
-.feature-request-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 4rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.info-card {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    margin-bottom: 2rem;
-}
-
-.info-card h4 {
-    color: var(--text-dark);
-    margin-bottom: 1rem;
-}
-
-.info-card ul {
-    list-style: none;
-    padding: 0;
-}
-
-.info-card li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.75rem;
-    color: var(--text-medium);
-}
-
-.info-card li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: var(--accent-color);
-    font-weight: bold;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -456,11 +345,6 @@ permalink: /roadmap/
     
     .roadmap-grid {
         grid-template-columns: 1fr;
-    }
-    
-    .feature-request-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
     }
 }
 
@@ -511,13 +395,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Check for success message
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('request') === 'success') {
-        // You could show a success message here
-        alert('Feature request submitted! Thank you for your suggestion.');
-        // Remove the parameter from URL
-        window.history.replaceState({}, document.title, window.location.pathname);
-    }
 });
 </script>
