@@ -4,8 +4,8 @@
   --primary-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
   --secondary-gradient: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
   --hero-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --accent-color: #ff6b35; // Red-orange from WordSen icon
-  --accent-hover: #e55a2b;
+  --accent-color: #ff4500; // More red-orange color
+  --accent-hover: #e63e00;
   --text-dark: #2d3748;
   --text-medium: #4a5568;
   --text-light: #718096;
@@ -20,6 +20,7 @@
   
   // Typography
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --brand-font: 'Dancing Script', cursive;
   --h1-size: 3.5rem;
   --h2-size: 2.5rem;
   --h3-size: 1.5rem;
@@ -84,7 +85,7 @@ p {
     &:hover {
       background: var(--accent-hover);
       transform: translateY(-2px);
-      box-shadow: 0 15px 30px rgba(255, 107, 53, 0.3);
+      box-shadow: 0 15px 30px rgba(255, 69, 0, 0.3);
     }
   }
   
@@ -128,8 +129,9 @@ p {
 
 .nav-brand {
   .brand-name {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-family: var(--brand-font);
+    font-size: 1.8rem;
+    font-weight: 400;
     color: var(--text-dark);
     text-decoration: none;
   }
@@ -215,14 +217,14 @@ p {
 .hero-title {
   font-size: 4rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--text-dark);
   margin-bottom: 1.5rem;
   line-height: 1.1;
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text-medium);
   margin-bottom: 2.5rem;
   line-height: 1.6;
 }
