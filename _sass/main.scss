@@ -4,8 +4,8 @@
   --primary-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
   --secondary-gradient: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
   --hero-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --accent-color: #ff4500; // More red-orange color
-  --accent-hover: #e63e00;
+  --accent-color: #9e2e20; // Deep red color
+  --accent-hover: #7a2118;
   --text-dark: #2d3748;
   --text-medium: #4a5568;
   --text-light: #718096;
@@ -89,7 +89,7 @@ p {
     &:hover {
       background: var(--accent-hover);
       transform: translateY(-2px);
-      box-shadow: 0 15px 30px rgba(255, 69, 0, 0.3);
+      box-shadow: 0 15px 30px rgba(158, 46, 32, 0.3);
     }
   }
   
