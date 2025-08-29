@@ -210,6 +210,10 @@ description: Get in touch with the WordSen team. We'd love to hear from you!
 }
 
 @media (max-width: 768px) {
+    .contact-header {
+        padding: 6rem 0 3rem;
+    }
+    
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -218,10 +222,35 @@ description: Get in touch with the WordSen team. We'd love to hear from you!
     .contact-method {
         flex-direction: column;
         text-align: center;
+        gap: 1rem;
     }
     
     .contact-form {
         padding: 1.5rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-header .section-header h1 {
+        font-size: 2rem;
+    }
+    
+    .contact-header .section-header p {
+        font-size: 1rem;
+    }
+    
+    .contact-form {
+        padding: 1.25rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1.25rem;
     }
 }
 </style>

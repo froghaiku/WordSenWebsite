@@ -43,9 +43,27 @@ description: Development updates, insights, and technical thoughts from the Word
 
 <style>
 .blog-header {
-    background: linear-gradient(135deg, #f0f4ff 0%, #e6f3ff 100%);
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
     padding: 8rem 0 4rem;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0)"/></radialGradient></defs><circle cx="200" cy="300" r="100" fill="url(%23a)"/><circle cx="800" cy="200" r="150" fill="url(%23a)"/><circle cx="600" cy="700" r="120" fill="url(%23a)"/></svg>');
+    opacity: 0.5;
+}
+
+.blog-header .section-header {
+    position: relative;
+    z-index: 1;
 }
 
 .blog-content {
