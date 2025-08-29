@@ -1,0 +1,238 @@
+---
+layout: default
+---
+
+<article class="post">
+    <header class="post-header">
+        <div class="container">
+            <div class="post-meta">
+                <time datetime="{{ page.date | date_to_xmlschema }}">
+                    {{ page.date | date: "%B %d, %Y" }}
+                </time>
+                {% if page.author %}
+                    <span class="post-author">by {{ page.author }}</span>
+                {% endif %}
+            </div>
+            <h1 class="post-title">{{ page.title }}</h1>
+            {% if page.subtitle %}
+                <p class="post-subtitle">{{ page.subtitle }}</p>
+            {% endif %}
+        </div>
+    </header>
+    
+    <div class="post-content">
+        <div class="container">
+            <div class="post-body">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+    
+    <footer class="post-footer">
+        <div class="container">
+            <div class="post-navigation">
+                {% if page.previous.url %}
+                    <a class="nav-previous" href="{{ page.previous.url | relative_url }}">
+                        <span class="nav-label">← Previous</span>
+                        <span class="nav-title">{{ page.previous.title }}</span>
+                    </a>
+                {% endif %}
+                
+                {% if page.next.url %}
+                    <a class="nav-next" href="{{ page.next.url | relative_url }}">
+                        <span class="nav-label">Next →</span>
+                        <span class="nav-title">{{ page.next.title }}</span>
+                    </a>
+                {% endif %}
+            </div>
+            
+            <div class="back-to-blog">
+                <a href="{{ '/blog/' | relative_url }}" class="btn btn-secondary">← Back to Blog</a>
+            </div>
+        </div>
+    </footer>
+</article>
+
+<style>
+.post-header {
+    background: linear-gradient(135deg, #f0f4ff 0%, #e6f3ff 100%);
+    padding: 8rem 0 4rem;
+    text-align: center;
+}
+
+.post-meta {
+    color: #718096;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.post-author {
+    margin-left: 1rem;
+}
+
+.post-title {
+    color: #2d3748;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.post-subtitle {
+    color: #4a5568;
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.post-content {
+    padding: 4rem 0;
+}
+
+.post-body {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #2d3748;
+}
+
+.post-body h2,
+.post-body h3,
+.post-body h4 {
+    color: #2d3748;
+    margin: 2.5rem 0 1rem 0;
+}
+
+.post-body h2 {
+    font-size: 2rem;
+}
+
+.post-body h3 {
+    font-size: 1.5rem;
+}
+
+.post-body h4 {
+    font-size: 1.25rem;
+}
+
+.post-body p {
+    margin-bottom: 1.5rem;
+}
+
+.post-body ul,
+.post-body ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.post-body li {
+    margin-bottom: 0.5rem;
+}
+
+.post-body blockquote {
+    border-left: 4px solid #ff6b35;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #4a5568;
+    background: #f7fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.post-body code {
+    background: #f1f5f9;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'Monaco', 'Menlo', monospace;
+    font-size: 0.875em;
+}
+
+.post-body pre {
+    background: #1a202c;
+    color: #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.post-body pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+}
+
+.post-footer {
+    background: #f7fafc;
+    padding: 3rem 0;
+    border-top: 1px solid #e2e8f0;
+}
+
+.post-navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.nav-previous,
+.nav-next {
+    display: block;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-previous:hover,
+.nav-next:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.nav-next {
+    text-align: right;
+}
+
+.nav-label {
+    display: block;
+    color: #ff6b35;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.nav-title {
+    display: block;
+    color: #2d3748;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.back-to-blog {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .post-title {
+        font-size: 2rem;
+    }
+    
+    .post-subtitle {
+        font-size: 1.125rem;
+    }
+    
+    .post-navigation {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-next {
+        text-align: left;
+    }
+}
+</style>

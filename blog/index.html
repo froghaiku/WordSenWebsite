@@ -1,0 +1,127 @@
+---
+layout: default
+title: Dev Blog
+description: Development updates, insights, and technical thoughts from the WordSen team.
+---
+
+<section class="blog-header">
+    <div class="container">
+        <div class="section-header">
+            <h1>Dev Blog</h1>
+            <p>Development updates, insights, and technical thoughts from the WordSen team.</p>
+        </div>
+    </div>
+</section>
+
+<section class="blog-content">
+    <div class="container">
+        <div class="posts-grid">
+            {% for post in site.posts %}
+                <article class="post-card">
+                    <div class="post-meta">
+                        <time datetime="{{ post.date | date_to_xmlschema }}">
+                            {{ post.date | date: "%B %d, %Y" }}
+                        </time>
+                    </div>
+                    <h2 class="post-title">
+                        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                    </h2>
+                    <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                    <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+                </article>
+            {% endfor %}
+            
+            {% if site.posts.size == 0 %}
+                <div class="no-posts">
+                    <h3>Coming Soon!</h3>
+                    <p>We're working on some exciting dev blog posts. Check back soon for updates on WordSen's development journey.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<style>
+.blog-header {
+    background: linear-gradient(135deg, #f0f4ff 0%, #e6f3ff 100%);
+    padding: 8rem 0 4rem;
+    text-align: center;
+}
+
+.blog-content {
+    padding: 4rem 0;
+}
+
+.posts-grid {
+    display: grid;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.post-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.post-meta {
+    color: #718096;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-title {
+    margin-bottom: 1rem;
+}
+
+.post-title a {
+    color: #2d3748;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.post-title a:hover {
+    color: #ff6b35;
+}
+
+.post-excerpt {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    color: #ff6b35;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #e55a2b;
+}
+
+.no-posts {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.no-posts h3 {
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+
+.no-posts p {
+    color: #4a5568;
+    max-width: 500px;
+    margin: 0 auto;
+}
+</style>
