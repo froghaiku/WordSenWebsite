@@ -4,13 +4,14 @@
   --primary-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
   --secondary-gradient: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
   --hero-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --accent-color: #9e2e20; // Deep red color
-  --accent-hover: #7a2118;
+  --accent-color: #dd6245; // Warm red-orange color
+  --accent-hover: #c54d30;
   --text-dark: #2d3748;
   --text-medium: #4a5568;
   --text-light: #718096;
   --white: #ffffff;
-  --light-bg: #f7fafc;
+  --light-bg: #f4f5f6;
+  --card-bg: #ffffff;
   
   // Spacing
   --section-padding: 6rem 0;
@@ -89,7 +90,7 @@ p {
     &:hover {
       background: var(--accent-hover);
       transform: translateY(-2px);
-      box-shadow: 0 15px 30px rgba(158, 46, 32, 0.3);
+      box-shadow: 0 15px 30px rgba(221, 98, 69, 0.3);
     }
   }
   
@@ -273,7 +274,7 @@ p {
 // Features Section
 .features-section {
   padding: var(--section-padding);
-  background: var(--white);
+  background: var(--light-bg);
 }
 
 .section-header {
@@ -300,7 +301,7 @@ p {
 }
 
 .feature-card {
-  background: var(--white);
+  background: var(--card-bg);
   padding: 2.5rem 2rem;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);

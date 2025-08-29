@@ -10,6 +10,7 @@
             <div class="nav-menu" id="nav-menu">
                 <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a>
                 <a href="{{ '/blog/' | relative_url }}" class="nav-link {% if page.url contains 'blog' %}active{% endif %}">Dev Blog</a>
+                <a href="{{ '/roadmap/' | relative_url }}" class="nav-link {% if page.url == '/roadmap/' %}active{% endif %}">Roadmap</a>
                 <a href="{{ '/contact/' | relative_url }}" class="nav-link {% if page.url == '/contact/' %}active{% endif %}">Contact</a>
                 <a href="#" class="nav-cta">Join Beta</a>
             </div>

@@ -1,0 +1,24 @@
+# Recent Updates / Changelog
+# Add new updates to the top of this list
+
+- version: "0.2.0"
+  date: "2025-08-29"
+  title: "Website Launch & Contact System"
+  type: "feature" # feature, improvement, fix
+  description: "Launched the new WordSen website with contact form, responsive design, and modern architecture."
+  items:
+    - "Brand new responsive website design"
+    - "Contact form with Formspree integration"
+    - "Mobile-first navigation with smooth animations"
+    - "SEO optimization and performance improvements"
+
+- version: "0.1.0"
+  date: "2025-08-15"
+  title: "Project Kickoff"
+  type: "feature"
+  description: "Started development of WordSen - the Japanese vocabulary learning app."
+  items:
+    - "Initial app concept and design"
+    - "Core spaced repetition algorithm research"
+    - "UI/UX wireframes and prototypes"
+    - "Essential 1,000 words list curation"

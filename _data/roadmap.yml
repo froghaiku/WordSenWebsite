@@ -1,0 +1,42 @@
+# Coming Soon - Roadmap Items
+# status: "development", "planning", "research"
+
+- title: "Core App Development"
+  timeline: "Q4 2025"
+  status: "development"
+  description: "Building the main WordSen learning app with spaced repetition system."
+  features:
+    - "Essential 1,000 Japanese words database"
+    - "Intelligent spaced repetition algorithm"
+    - "Progress tracking and statistics"
+    - "Offline learning capability"
+
+- title: "Beta Testing Program"
+  timeline: "Q1 2026"
+  status: "planning"
+  description: "Private beta with early users to refine the learning experience."
+  features:
+    - "Closed beta invitation system"
+    - "User feedback collection tools"
+    - "Performance optimization"
+    - "Bug fixes and improvements"
+
+- title: "Advanced Learning Features"
+  timeline: "Q2 2026"
+  status: "research"
+  description: "Enhanced features for deeper Japanese language learning."
+  features:
+    - "Audio pronunciations by native speakers"
+    - "Sentence examples and context"
+    - "Kanji stroke order animations"
+    - "Grammar pattern integration"
+
+- title: "Community Features"
+  timeline: "Q3 2026"
+  status: "planning"
+  description: "Social learning features to connect WordSen learners."
+  features:
+    - "Learning streaks and achievements"
+    - "Study groups and challenges"
+    - "Leaderboards and friendly competition"
+    - "Study buddy matching system"

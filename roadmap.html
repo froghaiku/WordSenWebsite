@@ -1,0 +1,523 @@
+---
+layout: default
+title: Roadmap
+description: Track WordSen's development progress, see what's coming next, and request new features.
+permalink: /roadmap/
+---
+
+<section class="roadmap-header">
+    <div class="container">
+        <div class="section-header">
+            <h1>WordSen Roadmap</h1>
+            <p>Follow along with WordSen's journey. See what's new, what's coming, and share your ideas!</p>
+        </div>
+    </div>
+</section>
+
+<section class="roadmap-content">
+    <div class="container">
+        <div class="roadmap-nav">
+            <a href="#recent-updates" class="roadmap-nav-link active">Recent Updates</a>
+            <a href="#coming-soon" class="roadmap-nav-link">Coming Soon</a>
+            <a href="#request-feature" class="roadmap-nav-link">Request Feature</a>
+        </div>
+
+        <!-- Recent Updates Section -->
+        <div id="recent-updates" class="roadmap-section">
+            <div class="section-header">
+                <h2>Recent Updates</h2>
+                <p>Here's what I've been working on lately</p>
+            </div>
+            
+            <div class="updates-timeline">
+                {% for update in site.data.updates %}
+                <div class="timeline-item">
+                    <div class="timeline-marker {{ update.type }}">
+                        {% if update.type == 'feature' %}🚀{% elsif update.type == 'improvement' %}⚡{% else %}🔧{% endif %}
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>{{ update.title }}</h3>
+                            <div class="timeline-meta">
+                                <span class="version">{{ update.version }}</span>
+                                <span class="date">{{ update.date | date: "%B %d, %Y" }}</span>
+                            </div>
+                        </div>
+                        <p class="timeline-description">{{ update.description }}</p>
+                        {% if update.items %}
+                        <ul class="timeline-items">
+                            {% for item in update.items %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Coming Soon Section -->
+        <div id="coming-soon" class="roadmap-section">
+            <div class="section-header">
+                <h2>Coming Soon</h2>
+                <p>Here's what I'm planning for WordSen's future</p>
+            </div>
+            
+            <div class="roadmap-grid">
+                {% for item in site.data.roadmap %}
+                <div class="roadmap-card {{ item.status }}">
+                    <div class="roadmap-status">
+                        {% if item.status == 'development' %}
+                            <span class="status-badge development">🚧 In Development</span>
+                        {% elsif item.status == 'planning' %}
+                            <span class="status-badge planning">📋 Planning</span>
+                        {% else %}
+                            <span class="status-badge research">🔍 Research</span>
+                        {% endif %}
+                    </div>
+                    <h3>{{ item.title }}</h3>
+                    <p class="roadmap-timeline">Target: {{ item.timeline }}</p>
+                    <p class="roadmap-description">{{ item.description }}</p>
+                    {% if item.features %}
+                    <ul class="roadmap-features">
+                        {% for feature in item.features %}
+                        <li>{{ feature }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Request Feature Section -->
+        <div id="request-feature" class="roadmap-section">
+            <div class="section-header">
+                <h2>Request a Feature</h2>
+                <p>Have an idea that would make WordSen better? I'd love to hear it!</p>
+            </div>
+            
+            <div class="feature-request-content">
+                <div class="feature-request-form">
+                    <form class="contact-form" action="https://formspree.io/f/ben@wordsen.com" method="POST">
+                        <div class="form-group">
+                            <label for="requester-name">Your Name</label>
+                            <input type="text" id="requester-name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="requester-email">Email (optional)</label>
+                            <input type="email" id="requester-email" name="email">
+                            <small>I'll only use this to follow up on your suggestion</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feature-title">Feature Title</label>
+                            <input type="text" id="feature-title" name="feature-title" placeholder="e.g., Audio pronunciation practice" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feature-description">Description</label>
+                            <textarea id="feature-description" name="feature-description" rows="4" 
+                                placeholder="Describe your feature idea. What problem would it solve? How would it work?" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feature-priority">How important is this to you?</label>
+                            <select id="feature-priority" name="priority">
+                                <option value="nice-to-have">Nice to have</option>
+                                <option value="would-be-helpful">Would be helpful</option>
+                                <option value="really-want">Really want this!</option>
+                                <option value="game-changer">Game changer!</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">Submit Feature Request</button>
+                        <input type="hidden" name="_subject" value="Feature Request from WordSen Roadmap">
+                        <input type="hidden" name="_next" value="{{ site.url }}/roadmap/?request=success">
+                    </form>
+                </div>
+                
+                <div class="feature-request-info">
+                    <div class="info-card">
+                        <h4>💡 What makes a great feature request?</h4>
+                        <ul>
+                            <li><strong>Clear problem:</strong> What specific issue does this solve?</li>
+                            <li><strong>User benefit:</strong> How would this help you learn better?</li>
+                            <li><strong>Context:</strong> When/where would you use this feature?</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>🚀 What happens next?</h4>
+                        <ul>
+                            <li>I review all feature requests personally</li>
+                            <li>Popular ideas get prioritized in development</li>
+                            <li>I'll email you when your feature ships!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.roadmap-header {
+    background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+    padding: 8rem 0 4rem;
+    text-align: center;
+}
+
+.roadmap-content {
+    padding: 4rem 0;
+    background: var(--light-bg);
+}
+
+/* Navigation Tabs */
+.roadmap-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.roadmap-nav-link {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: var(--text-medium);
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.roadmap-nav-link:hover,
+.roadmap-nav-link.active {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+}
+
+.roadmap-section {
+    margin-bottom: 6rem;
+}
+
+/* Timeline Styles */
+.updates-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.updates-timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent-color), var(--text-light));
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 5rem;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background: var(--card-bg);
+    border: 3px solid var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.timeline-marker.feature { border-color: #10b981; }
+.timeline-marker.improvement { border-color: #3b82f6; }
+.timeline-marker.fix { border-color: #f59e0b; }
+
+.timeline-content {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.timeline-header h3 {
+    margin: 0;
+    color: var(--text-dark);
+}
+
+.timeline-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.version {
+    background: var(--accent-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.date {
+    color: var(--text-light);
+    font-size: 0.875rem;
+}
+
+.timeline-description {
+    color: var(--text-medium);
+    margin-bottom: 1rem;
+}
+
+.timeline-items {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline-items li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-medium);
+}
+
+.timeline-items li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: bold;
+}
+
+/* Roadmap Grid */
+.roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.roadmap-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+    border-top: 4px solid var(--text-light);
+}
+
+.roadmap-card.development { border-top-color: #f59e0b; }
+.roadmap-card.planning { border-top-color: #3b82f6; }
+.roadmap-card.research { border-top-color: #8b5cf6; }
+
+.roadmap-card:hover {
+    transform: translateY(-4px);
+}
+
+.roadmap-status {
+    margin-bottom: 1rem;
+}
+
+.status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.status-badge.development { background: #fef3c7; color: #d97706; }
+.status-badge.planning { background: #dbeafe; color: #2563eb; }
+.status-badge.research { background: #ede9fe; color: #7c3aed; }
+
+.roadmap-card h3 {
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.roadmap-timeline {
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.roadmap-description {
+    color: var(--text-medium);
+    margin-bottom: 1.5rem;
+}
+
+.roadmap-features {
+    list-style: none;
+    padding: 0;
+}
+
+.roadmap-features li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-medium);
+}
+
+.roadmap-features li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+/* Feature Request Section */
+.feature-request-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.info-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.info-card h4 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.info-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-card li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-medium);
+}
+
+.info-card li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .roadmap-header {
+        padding: 6rem 0 3rem;
+    }
+    
+    .roadmap-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .roadmap-nav-link {
+        padding: 0.75rem 1.5rem;
+        text-align: center;
+    }
+    
+    .timeline-item {
+        padding-left: 4rem;
+    }
+    
+    .timeline-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .timeline-meta {
+        justify-content: flex-start;
+    }
+    
+    .roadmap-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature-request-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .updates-timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        padding-left: 3rem;
+    }
+    
+    .timeline-marker {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .roadmap-card {
+        padding: 1.5rem;
+    }
+}
+</style>
+
+<script>
+// Simple tab navigation
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.roadmap-nav-link');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all links
+            navLinks.forEach(l => l.classList.remove('active'));
+            
+            // Add active class to clicked link
+            this.classList.add('active');
+            
+            // Smooth scroll to section
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    
+    // Check for success message
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('request') === 'success') {
+        // You could show a success message here
+        alert('Feature request submitted! Thank you for your suggestion.');
+        // Remove the parameter from URL
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+});
+</script>
