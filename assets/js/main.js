@@ -29,6 +29,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Dropdown Menu Functionality
+    const dropdown = document.querySelector('.nav-dropdown');
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    
+    if (dropdown && dropdownToggle) {
+        dropdownToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            dropdown.classList.toggle('active');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+        
+        // Close dropdown when clicking on dropdown links
+        dropdown.querySelectorAll('.dropdown-link').forEach(link => {
+            link.addEventListener('click', function() {
+                dropdown.classList.remove('active');
+            });
+        });
+    }
+    
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

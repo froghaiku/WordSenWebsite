@@ -184,6 +184,7 @@ p {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
 }
 
 .dropdown-arrow {
@@ -191,7 +192,7 @@ p {
   transition: transform 0.3s ease;
 }
 
-.nav-dropdown:hover .dropdown-arrow {
+.nav-dropdown.active .dropdown-arrow {
   transform: rotate(180deg);
 }
 
@@ -212,7 +213,7 @@ p {
   z-index: 1001;
 }
 
-.nav-dropdown:hover .dropdown-content {
+.nav-dropdown.active .dropdown-content {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -544,7 +545,7 @@ p {
       position: static;
     }
     
-    .dropdown-content {
+    .nav-dropdown.active .dropdown-content {
       position: static;
       opacity: 1;
       visibility: visible;
