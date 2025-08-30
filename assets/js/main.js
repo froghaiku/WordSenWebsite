@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.toggle('menu-open');
         });
         
-        // Close menu when clicking on nav links
-        navMenu.querySelectorAll('.nav-link').forEach(link => {
+        // Close menu when clicking on nav links (except dropdown toggle)
+        navMenu.querySelectorAll('.nav-link:not(.dropdown-toggle)').forEach(link => {
             link.addEventListener('click', function() {
                 navMenu.classList.remove('active');
                 navToggle.classList.remove('active');
@@ -46,10 +46,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Close dropdown when clicking on dropdown links
+        // Close dropdown and mobile menu when clicking on dropdown links
         dropdown.querySelectorAll('.dropdown-link').forEach(link => {
             link.addEventListener('click', function() {
                 dropdown.classList.remove('active');
+                // Also close mobile menu if it's open
+                if (navMenu && navToggle) {
+                    navMenu.classList.remove('active');
+                    navToggle.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                }
             });
         });
     }
