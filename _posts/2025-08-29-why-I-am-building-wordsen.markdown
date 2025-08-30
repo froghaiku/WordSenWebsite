@@ -8,17 +8,21 @@ I needed a better Anki.
 
 That is the shortest answer to why I created WordSen. I had been learning Japanese for a few months in preparation for my first trip to Japan at the age of 38. After spending time in New York City, I wanted to go to another gigantic population center, and there is none more densely packed than Tokyo. As luck would have it my work was also sending me to the Philippines later that year. That meant I could take a quick flight to Japan after my work trip and spend two full weeks in the land of the rising sun.
 
-I had always been interested in Japanese culture, but this was my first real effort to learn the language. I had six months before my trip to learn enough to get around not only the larger more touristy areas like Tokyo and Kyoto, but also the more mono-lingual smaller cities of Kanazawa and Nagano.
+I had always been interested in Japanese culture, **but this was my first real effort to learn the language**. I had six months before my trip to learn enough to get around not only the larger more touristy areas like Tokyo and Kyoto, but also the more mono-lingual smaller cities of Kanazawa and Nagano.
 
-# Tools I used to learn (enough) Japanese in 6 months
+## Tools I used to learn (enough) Japanese in 6 months
 
 If you only have six months to learn Japanese there are a few tools that are really helpful:
 
 ### Pimsleur Audio Lessons
 
-These are absolutely fantastic at helping your pronounciation and getting you comfortable speaking. Without these lessons I would not have felt enough to say to say to the Taxi driver when I first landed, "お天気ですね" or "Nice weather, isn't it?"
+These are absolutely fantastic at helping your pronounciation and getting you comfortable speaking. Without these lessons I would not have felt confident enough to say to say to the Taxi driver when I first landed...
 
-I felt ecstatic when he replied back with, "そうですねえ" and I actually understood him! (He was agreeing with me!). Pimsleur burned into me how important it is to understand full sentences, repeat them out loud, and have them in your back pocket to use in every day situations.
+> "お天気ですね" or "Nice weather, isn't it?"
+
+I felt ecstatic when he replied back with, "そうですねえ" and I actually understood him! (he was agreeing with me). 
+
+Pimsleur burned into me how important it is to understand full sentences, repeat them out loud, and have them in your back pocket to use in every day situations.
 
 ### One-on-one Private lessons
 
@@ -30,7 +34,7 @@ When learning a language you need to *learn a lot of new words*. There is no way
 
 Anki is the system everyone recommends. It is a `spaced repetition system` where flashcards with words on them are shown at specific intervals to enhance the likelihood of you storing the words in long term memory. You ideally want to be shown a word when you are *right on the edge of forgetting* it.* If you do that, you have a higher likelihood of remembering it for longer next time. After 5-12 repetitions that word should be one you never forget!
 
-# The problems with Anki
+## The problems with Anki
 
 While anki is the gold standard, it caused endless frustration:
 
@@ -92,7 +96,7 @@ As far as I knew, there was no app out there that existed like that. So I decide
 
 I'm sure I'll dive into how I am creating WordSen in future blogs, but for now I wanted to explain what makes WordSen different. The things I am adding make it the very best app when it comes to learning Japanese vocabulary.
 
-**Flashcards built to remember**
+### Flashcards built to remember
 
 The flashcards in WordSen contain all of the things you need to help build memory connections in your brain:
 
@@ -109,7 +113,7 @@ That last feature was something I added after my positive experience with J-Labs
 
 But how can you hand make a digital flashcard? By taking a picture! Every flashcard in WordSen has an image you can add. I encourage you to take one with your phone camera or upload one from your favorite movie or anime. And don't worry, images are only stored locally. WordSen is privacy first, and your images are never uploaded to the cloud. There is no way for anyone to see the images for each of your flashcards but you. If you decide to switch phones, there is also a handy image export feature so you can move your customized images to a new phone easily. 
 
-**1,000 Words is significant and ACHIEVABLE**
+### 1,000 Words is significant and ACHIEVABLE
 
 I curated a list of the most commonly used Japanese words. These are the first 1,000 words you should learn in your journey. If you learn just these 1,000 words you will be able to understand the majority of words in most sentences. You might not catch every word, but you can start gleaning a lot of context.
 
@@ -125,7 +129,7 @@ To drive this point home even more, during my first trip to Japan I only knew ab
 
 If I can have a successful 2 week trip in Japan with 200 words, you will be able to do so much more once you conquer 1,000. If you learned 5 words per day you would be done with that in about 7 months. `Once you know 1,000 words you can start unlocking the real fun of learning languages which is understanding books, movies, and shows in your target language!`
 
-**Best motivation: Study or your pet dies!**
+### Best motivation: Study or your pet dies!
 
 You aren't a murderer.... are you? Okay, okay it's not quite THAT serious. But that is good motivation isn't it? 
 
@@ -139,7 +143,7 @@ The addition of the Kitsune pet was the final piece I needed to create a game th
 
 ![inari]({{ '/assets/images/inari.png' | relative_url }})
 
-**Easily add new words to study**
+### Easily add new words to study
 
 The last problem to solve was being able to easily add study words to my flashcard deck if I came across them in books, shows, and other media. This was a CRITICAL feature. We don't want a repeat of the ven diagram above.
 
