@@ -10,31 +10,31 @@ That is the shortest answer to why I created WordSen. I had been learning Japane
 
 I had always been interested in Japanese culture, but this was my first real effort to learn the language. I had six months before my trip to learn enough to get around not only the larger more touristy areas like Tokyo and Kyoto, but also the more mono-lingual smaller cities of Kanazawa and Nagano.
 
-## Tools I used to learn (enough) Japanese in 6 months
+# Tools I used to learn (enough) Japanese in 6 months
 
 If you only have six months to learn Japanese there are a few tools that are really helpful:
 
-**Pimsleur Audio Lessons**
+### Pimsleur Audio Lessons
 
 These are absolutely fantastic at helping your pronounciation and getting you comfortable speaking. Without these lessons I would not have felt enough to say to say to the Taxi driver when I first landed, "お天気ですね" or "Nice weather, isn't it?"
 
 I felt ecstatic when he replied back with, "そうですねえ" and I actually understood him! (He was agreeing with me!). Pimsleur burned into me how important it is to understand full sentences, repeat them out loud, and have them in your back pocket to use in every day situations.
 
-**One-on-one Private lessons**
+### One-on-one Private lessons
 
 I signed up for weekly lessons with a wonderful Japanese teacher. These were not nearly as helpful as Pimsleur for helping me learn the core vocabulary I needed in my travels, but she did help clarify some of the strange nuances of the language and answer any questions hat came up. She also was able to confirm my pronunciation was quite good (thanks Pimsluer!), something I had been worried about.
 
-**Anki Flashcard System**
+### Anki Flashcard System
 
 When learning a language you need to *learn a lot of new words*. There is no way around it. The grammar, cultural rules, and even pronunciation isn't nearly as important as learning enough words to be able to speak and understand what is said. 
 
 Anki is the system everyone recommends. It is a `spaced repetition system` where flashcards with words on them are shown at specific intervals to enhance the likelihood of you storing the words in long term memory. You ideally want to be shown a word when you are *right on the edge of forgetting* it.* If you do that, you have a higher likelihood of remembering it for longer next time. After 5-12 repetitions that word should be one you never forget!
 
-## The problems with Anki
+# The problems with Anki
 
 While anki is the gold standard, it caused endless frustration:
 
-**Anki is complicated to use**
+### Anki is complicated to use
 
 I'm not here to say Anki is impossible to use like one of those old infomercials of someone demonstrating how difficult a simple object like a 'hose' is to control.
 
@@ -42,7 +42,7 @@ I'm not here to say Anki is impossible to use like one of those old infomercials
 
 But let me be real, I am a very technical person and I spent hours trying to set up Anki. The problem is there are so many ways to customize it, that doing something basic was incredibly difficult. When you start researching all of the advanced options and how people recommend you adjust your cards per day or your 'ease factor' (what the heck is that!?) for maximum retention, it gets very overwhelming. 
 
-**Anki has no default set of Japanese flashcards**
+### Anki has no default set of Japanese flashcards
 
 If you've researched Anki you might say something like:
 
@@ -59,7 +59,7 @@ I did eventually find a good deck that had some awesome features like:
 
 It was a great deck. If you want to check it out it's [J-Labs Beginner Course](https://www.japanese-like-a-breeze.com/guide-for-beginners/). It's a GREAT Anki deck, especially if you want more 'casual' spoken Japanese.
 
-**No easy way to add cards to a deck**
+### No easy way to add cards to a deck
 
 While the J-Labs Anki deck is great, I never found an easy way to add Japanese words to it that I found out in the real world. If I encountered a cool phrase while playing a Japanese game or watching a movie or anime, I couldn't capture it to study later. 
 
