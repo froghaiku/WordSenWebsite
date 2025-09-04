@@ -330,6 +330,17 @@ p {
       transform: scale(1.05);
     }
   }
+  
+  .app-screenshots {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 }
 
 // Features Section
@@ -608,9 +619,17 @@ p {
     padding: 6rem 0 4rem;
   }
   
+  .hero-image .app-screenshots {
+    max-width: 250px;
+  }
+  
   .hero-title {
     font-size: 2rem;
     line-height: 1.2;
+  }
+  
+  .hero-image .app-screenshots {
+    max-width: 200px;
   }
   
   .hero-subtitle {
