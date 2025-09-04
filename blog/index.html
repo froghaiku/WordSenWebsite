@@ -44,10 +44,13 @@ description: Development updates, insights, and technical thoughts from the Word
 <style>
 .blog-header {
     background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-    padding: 8rem 0 4rem;
+    padding: 5.5rem 0 3rem;
     text-align: center;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    min-height: 40vh;
 }
 
 .blog-header::before {
@@ -141,5 +144,11 @@ description: Development updates, insights, and technical thoughts from the Word
     color: #4a5568;
     max-width: 500px;
     margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .blog-header {
+        padding: 4rem 0 2.5rem;
+    }
 }
 </style>
