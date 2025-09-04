@@ -36,9 +36,92 @@ canonical_url: "https://www.wordsen.com/beta"
     margin: 2rem 0;
 }
 
+/* Beta Testing Grid */
+.beta-testing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.beta-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+    border-top: 4px solid var(--text-light);
+}
+
+.beta-card.core { border-top-color: #10b981; }
+.beta-card.gamification { border-top-color: #f59e0b; }
+.beta-card.content { border-top-color: #3b82f6; }
+
+.beta-card:hover {
+    transform: translateY(-4px);
+}
+
+.beta-status {
+    margin-bottom: 1rem;
+}
+
+.status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.status-badge.core { background: #d1fae5; color: #065f46; }
+.status-badge.gamification { background: #fef3c7; color: #d97706; }
+.status-badge.content { background: #dbeafe; color: #2563eb; }
+
+.beta-card h3 {
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.beta-timeline {
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.beta-description {
+    color: var(--text-medium);
+    margin-bottom: 1.5rem;
+}
+
+.beta-features {
+    list-style: none;
+    padding: 0;
+}
+
+.beta-features li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-medium);
+}
+
+.beta-features li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
 @media (max-width: 768px) {
     .page-header {
         padding: 4rem 0 2.5rem;
+    }
+    
+    .beta-testing-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .beta-card {
+        padding: 1.5rem;
     }
 }
 </style>
@@ -94,6 +177,56 @@ canonical_url: "https://www.wordsen.com/beta"
             <div class="beta-pitch">
                 <h3>🚀 Why Join the Beta?</h3>
                 <p>As a beta tester, you'll get exclusive early access to WordSen's cozy study app designed specifically for Japanese learners. You'll help shape the future of the app while accelerating your own Japanese learning journey. Plus, you'll be part of a small community of dedicated learners who are serious about mastering Japanese vocabulary. Your feedback will directly influence how WordSen evolves, and you'll have a lasting impact on an app that will help thousands of future Japanese learners.</p>
+            </div>
+            
+            <!-- Beta Testing Areas -->
+            <div class="section-header" style="margin-top: 4rem;">
+                <h2>What We're Testing</h2>
+                <p>Here are the key areas where your feedback will make the biggest impact</p>
+            </div>
+            
+            <div class="beta-testing-grid">
+                <div class="beta-card core">
+                    <div class="beta-status">
+                        <span class="status-badge core">🎯 Core Features</span>
+                    </div>
+                    <h3>Flashcard Learning System</h3>
+                    <p class="beta-timeline">Testing Focus: November 2025</p>
+                    <p class="beta-description">Help us perfect the spaced repetition algorithm and flashcard interface that adapts to your learning pace.</p>
+                    <ul class="beta-features">
+                        <li>Smart review scheduling</li>
+                        <li>Card difficulty adjustment</li>
+                        <li>Learning streak tracking</li>
+                    </ul>
+                </div>
+                
+                <div class="beta-card gamification">
+                    <div class="beta-status">
+                        <span class="status-badge gamification">🐱 Pet System</span>
+                    </div>
+                    <h3>Motivational Pet Features</h3>
+                    <p class="beta-timeline">Testing Focus: December 2025</p>
+                    <p class="beta-description">Test our cozy pet companion system designed to keep you motivated through your Japanese learning journey.</p>
+                    <ul class="beta-features">
+                        <li>Pet growth and evolution</li>
+                        <li>Daily care interactions</li>
+                        <li>Study streak rewards</li>
+                    </ul>
+                </div>
+                
+                <div class="beta-card content">
+                    <div class="beta-status">
+                        <span class="status-badge content">📚 Content</span>
+                    </div>
+                    <h3>Vocabulary & Content</h3>
+                    <p class="beta-timeline">Testing Focus: Ongoing</p>
+                    <p class="beta-description">Help validate our curated 1,000-word list and test the custom vocabulary addition features.</p>
+                    <ul class="beta-features">
+                        <li>Core vocabulary effectiveness</li>
+                        <li>Custom word addition flow</li>
+                        <li>Context and example sentences</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
