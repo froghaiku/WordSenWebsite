@@ -18,88 +18,38 @@ permalink: /features/easy-adding-cards/
     <div class="container">
         <div class="feature-grid">
             <div class="feature-text">
-                <h2>Learn From Real Japanese</h2>
-                <p>Don't just study textbook words. <strong>Capture vocabulary</strong> from the Japanese content you actually enjoy – anime, manga, YouTube videos, news articles, and conversations.</p>
+                <h2>The Missing Piece of Language Learning</h2>
+                <p>This was the feature that made me decide to build WordSen. I never found an easy way to add Japanese words that I discovered in the real world. If I encountered a cool phrase while playing a Japanese game or watching anime, I couldn't capture it to study later.</p>
                 
-                <h3>Multiple Input Methods</h3>
-                <ul class="feature-list">
-                    <li><strong>Quick Add:</strong> Type or paste any Japanese text</li>
-                    <li><strong>Photo Capture:</strong> Snap a picture of manga or signs</li>
-                    <li><strong>Audio Recognition:</strong> Listen and add from anime or podcasts</li>
-                    <li><strong>Browser Extension:</strong> Add words while browsing Japanese sites</li>
-                    <li><strong>Manual Entry:</strong> Full control for custom cards</li>
-                </ul>
+                <p>The words I was learning in Pimsleur didn't match what I was practicing with my Japanese instructor, and neither aligned with my Anki deck. There was no overlap! This is a problem every serious Japanese learner faces when consuming Japanese content.</p>
                 
-                <h3>Automatic Context Detection</h3>
-                <p>WordSen's smart system automatically:</p>
-                <ul class="feature-list">
-                    <li>Detects word boundaries and readings</li>
-                    <li>Finds the most relevant dictionary entry</li>
-                    <li>Suggests example sentences with similar usage</li>
-                    <li>Identifies grammar patterns and particles</li>
-                    <li>Tags words by difficulty and frequency</li>
-                </ul>
+                <h3>Record, Analyze, Add – It's That Simple</h3>
+                <p>WordSen makes adding new vocabulary incredibly easy:</p>
                 
-                <h3>Smart Duplicate Prevention</h3>
-                <ul class="feature-list">
-                    <li>Recognizes words you've already learned</li>
-                    <li>Suggests similar words to strengthen connections</li>
-                    <li>Prevents deck bloat with intelligent filtering</li>
-                    <li>Merges different forms of the same word</li>
-                </ul>
+                <p><strong>Just click the 'add a word' feature and record yourself saying the phrase you just heard.</strong> That's it! WordSen will then use AI to analyze your word or phrase, correct it if needed, generate spoken audio, and automatically add it to your study list.</p>
                 
-                <h3>Batch Processing</h3>
-                <ul class="feature-list">
-                    <li>Add entire sentences or paragraphs at once</li>
-                    <li>Review and edit before adding to your deck</li>
-                    <li>Prioritize words based on your learning goals</li>
-                    <li>Schedule new cards to avoid overwhelm</li>
-                </ul>
+                <p>The next time you study, you're presented with that word in the same format as all your core study words – complete with male and female speakers, example sentences, and space for your custom image. You didn't have to do anything extra!</p>
+                
+                <h3>Critical for Real Japanese Learning</h3>
+                <p>This feature is a must-have for any serious Japanese learner who regularly consumes Japanese content. Whether you're:</p>
+                
+                • Watching <strong>Spy x Family</strong> and catch an interesting expression<br>
+                • Playing a <strong>Japanese video game</strong> and encounter new vocabulary<br>
+                • Reading <strong>manga</strong> and find words not in your deck<br>
+                • Having <strong>conversations</strong> and learning new phrases<br>
+                
+                <p>WordSen captures it all and integrates it seamlessly into your study routine. No more scattered vocabulary across different sources – everything comes together in one cohesive learning experience.</p>
                 
                 <div class="feature-cta">
-                    <a href="#" class="btn btn-primary btn-large">Start Adding Your Words</a>
+                    <a href="{{ '/beta' | relative_url }}" class="btn btn-primary btn-large">Join the Beta Test</a>
                 </div>
             </div>
             
             <div class="feature-visual">
-                <div class="add-card-demo">
-                    <div class="input-demo">
-                        <h4>Add New Vocabulary</h4>
-                        <div class="input-methods">
-                            <div class="input-tab active">📝 Text</div>
-                            <div class="input-tab">📷 Photo</div>
-                            <div class="input-tab">🎵 Audio</div>
-                        </div>
-                        
-                        <div class="text-input">
-                            <textarea placeholder="Paste Japanese text here...">このラーメンはとても美味しいです。</textarea>
-                        </div>
-                        
-                        <button class="analyze-btn">Analyze Text</button>
-                    </div>
-                    
-                    <div class="detected-words">
-                        <h4>Detected Words</h4>
-                        <div class="word-suggestions">
-                            <div class="word-suggestion selected">
-                                <div class="word">ラーメン</div>
-                                <div class="reading">ramen</div>
-                                <div class="meaning">noodle soup</div>
-                            </div>
-                            <div class="word-suggestion">
-                                <div class="word">美味しい</div>
-                                <div class="reading">おいしい</div>
-                                <div class="meaning">delicious</div>
-                            </div>
-                            <div class="word-suggestion known">
-                                <div class="word">この</div>
-                                <div class="reading">kono</div>
-                                <div class="meaning">this (already known)</div>
-                            </div>
-                        </div>
-                        
-                        <button class="add-selected-btn">Add Selected Words (2)</button>
-                    </div>
+                <div class="venn-diagram">
+                    <h4>The Problem WordSen Solves</h4>
+                    <img src="{{ '/assets/images/venndiagram.png' | relative_url }}" alt="Venn diagram showing the lack of overlap between Pimsleur audio lessons, Japanese instructor content, and Anki flashcard deck vocabulary - illustrating the disconnected learning experience that WordSen fixes" class="diagram-image">
+                    <p class="diagram-caption">Before WordSen: No overlap between what you study in different resources</p>
                 </div>
             </div>
         </div>
@@ -109,24 +59,34 @@ permalink: /features/easy-adding-cards/
 <style>
 .feature-header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 180px; /* Same as other headers */
+    padding-top: 0; /* Let flexbox centering handle positioning */
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 24vh;
     text-align: center;
+    box-sizing: border-box; /* Ensure padding is included in height calculations */
     color: white;
+}
+
+.feature-header h1 {
+    margin: 0;
+    font-size: 3.5rem; /* Same as other headers */
+    color: white;
+}
+
+.feature-header p {
+    margin: 0.5rem 0 0 0; /* Reduced margin */
+    font-size: 1rem; /* Smaller font size */
+    color: white;
+}
+
+.feature-header .section-header {
+    margin-bottom: 0; /* Remove bottom margin */
 }
 
 .feature-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.feature-header h1,
-.feature-header p {
-    color: white;
+    padding: 0 1.5rem; /* Reduce container padding */
 }
 
 .feature-content {
@@ -182,119 +142,43 @@ permalink: /features/easy-adding-cards/
     margin-top: 3rem;
 }
 
-.add-card-demo {
+.venn-diagram {
     background: var(--card-bg);
     padding: 2.5rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
+    text-align: center;
 }
 
-.input-demo,
-.detected-words {
+.venn-diagram h4 {
+    color: var(--text-dark);
     margin-bottom: 2rem;
 }
 
-.input-demo h4,
-.detected-words h4 {
-    color: var(--text-dark);
-    margin-bottom: 1rem;
-}
-
-.input-methods {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.input-tab {
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    background: #f1f5f9;
-    color: var(--text-medium);
-    font-size: 0.875rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.input-tab.active {
-    background: var(--accent-color);
-    color: white;
-}
-
-.text-input textarea {
+.diagram-image {
     width: 100%;
-    height: 80px;
-    padding: 1rem;
-    border: 2px solid #e2e8f0;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto 1.5rem;
     border-radius: 8px;
-    font-size: 1rem;
-    resize: vertical;
-    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.analyze-btn,
-.add-selected-btn {
-    background: var(--accent-color);
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.analyze-btn:hover,
-.add-selected-btn:hover {
-    background: var(--accent-hover);
-}
-
-.word-suggestions {
-    margin-bottom: 1rem;
-}
-
-.word-suggestion {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.75rem;
-    border: 2px solid #e2e8f0;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.word-suggestion.selected {
-    border-color: var(--accent-color);
-    background: rgba(221, 98, 69, 0.05);
-}
-
-.word-suggestion.known {
-    opacity: 0.6;
-    cursor: default;
-}
-
-.word {
-    font-weight: 600;
-    color: var(--text-dark);
-    min-width: 80px;
-}
-
-.reading {
+.diagram-caption {
     color: var(--text-medium);
     font-size: 0.9rem;
-    min-width: 60px;
-}
-
-.meaning {
-    color: var(--text-medium);
-    flex: 1;
+    font-style: italic;
+    margin: 0;
 }
 
 @media (max-width: 768px) {
     .feature-header {
-        min-height: 20vh;
+        min-height: 180px; /* Same as other headers (mobile) */
+        padding-top: 0; /* Let flexbox centering handle positioning */
+    }
+    
+    .feature-header h1 {
+        font-size: 2.5rem; /* Mobile h1 size to match other headers */
     }
     
     .feature-grid {
@@ -302,18 +186,12 @@ permalink: /features/easy-adding-cards/
         gap: 3rem;
     }
     
-    .add-card-demo {
+    .venn-diagram {
         padding: 2rem;
     }
     
-    .input-methods {
-        flex-direction: column;
-    }
-    
-    .word-suggestion {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
+    .diagram-image {
+        max-width: 100%;
     }
 }
 </style>

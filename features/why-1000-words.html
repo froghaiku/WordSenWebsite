@@ -18,30 +18,28 @@ permalink: /features/why-1000-words/
     <div class="container">
         <div class="feature-grid">
             <div class="feature-text">
-                <h2>The Science Behind 1,000 Words</h2>
-                <p>Research shows that knowing the most frequent 1,000 words in any language gives you approximately <strong>75-80% comprehension</strong> of everyday conversation. This isn't just theory – it's the foundation that makes real communication possible.</p>
+                <h2>The Power of 1,000 Words</h2>
+                <p>Research shows that knowing the most frequent 1,000 words in any language gives you approximately <strong>75-80% comprehension</strong> of everyday conversation. This isn't just theory – it's the foundation that unlocks real Japanese communication.</p>
+                
+                <p>During my first trip to Japan, I only knew about 200 Japanese words. But even that small vocabulary was enough to order food at restaurants, ask for directions, make small talk, and even handle a phone call to a taxi service where the operator spoke no English. If you can have meaningful experiences with just 200 words, imagine what you can do with 1,000!</p>
                 
                 <h3>Quality Over Quantity</h3>
-                <p>Instead of overwhelming you with thousands of random vocabulary words, WordSen focuses on the <strong>essential 1,000</strong> that appear most frequently in:</p>
-                <ul class="feature-list">
-                    <li>Daily conversations with friends and family</li>
-                    <li>Basic business and workplace interactions</li>
-                    <li>Shopping, dining, and travel situations</li>
-                    <li>News articles and social media</li>
-                    <li>Anime, manga, and popular culture</li>
-                </ul>
+                <p>Instead of drowning you with thousands of random vocabulary words, WordSen focuses on the <strong>essential 1,000</strong> – carefully curated from the most commonly used Japanese words. This isn't about memorizing textbook terms; it's about learning the words that appear in real conversations, anime, news, and daily life.</p>
                 
-                <h3>Build Momentum, Not Overwhelm</h3>
-                <p>With a clear, achievable goal of 1,000 words, you can:</p>
-                <ul class="feature-list">
-                    <li>Track your progress with meaningful milestones</li>
-                    <li>Feel confident as you recognize more and more Japanese</li>
-                    <li>Build a solid foundation for advanced learning</li>
-                    <li>Actually use what you've learned in real situations</li>
-                </ul>
+                <p>Think about it this way: you can understand a lot of what someone is saying even when you miss some words. Context and body language fill in the gaps. That's the power of knowing enough vocabulary to get the gist of what's happening.</p>
+                
+                <h3>An Achievable Goal That Changes Everything</h3>
+                <p>Learning 1,000 words sounds daunting, but it's more achievable than you think. If you learned just 5 words per day, you'd master all 1,000 in about 7 months. That's a clear, concrete goal – not some endless journey with no finish line.</p>
+                
+                <p><strong>Once you know 1,000 words, you unlock the real fun of learning languages:</strong> understanding books, movies, and shows in Japanese. You'll finally be able to enjoy Japanese content while continuing to learn naturally.</p>
+                
+                • <strong>75-80% comprehension</strong> of everyday Japanese conversation<br>
+                • <strong>7 months</strong> to completion at just 5 words per day<br>
+                • <strong>Proven results</strong> from real travel experiences<br>
+                • <strong>Gateway to advanced learning</strong> through Japanese media
                 
                 <div class="feature-cta">
-                    <a href="#" class="btn btn-primary btn-large">Start Learning the Essential 1,000</a>
+                    <a href="{{ '/beta' | relative_url }}" class="btn btn-primary btn-large">Join the Beta Test</a>
                 </div>
             </div>
             
@@ -77,18 +75,31 @@ permalink: /features/why-1000-words/
 <style>
 .feature-header {
     background: linear-gradient(135deg, #fef9d7 0%, #d299c2 100%);
+    min-height: 180px; /* Same as roadmap header */
+    padding-top: 0; /* Let flexbox centering handle positioning */
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 24vh;
     text-align: center;
+    box-sizing: border-box; /* Ensure padding is included in height calculations */
+}
+
+.feature-header h1 {
+    margin: 0;
+    font-size: 3.5rem; /* Same as dev blog header */
+}
+
+.feature-header p {
+    margin: 0.5rem 0 0 0; /* Reduced margin */
+    font-size: 1rem; /* Smaller font size */
+}
+
+.feature-header .section-header {
+    margin-bottom: 0; /* Remove bottom margin */
 }
 
 .feature-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    padding: 0 1.5rem; /* Reduce container padding */
 }
 
 .feature-content {
@@ -204,7 +215,12 @@ permalink: /features/why-1000-words/
 
 @media (max-width: 768px) {
     .feature-header {
-        min-height: 20vh;
+        min-height: 180px; /* Same as roadmap header (mobile) */
+        padding-top: 0; /* Let flexbox centering handle positioning */
+    }
+    
+    .feature-header h1 {
+        font-size: 2.5rem; /* Mobile h1 size to match dev blog */
     }
     
     .feature-grid {

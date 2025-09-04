@@ -26,6 +26,10 @@
   --h2-size: 2.5rem;
   --h3-size: 1.5rem;
   --body-size: 1.125rem;
+  
+  // Header Heights (for fixed navigation)
+  --header-height: 80px; // Desktop header height (more accurate)
+  --mobile-header-height: 90px; // Mobile header height (more accurate)
 }
 
 // Reset & Base Styles
@@ -33,6 +37,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
 }
 
 body {
@@ -265,8 +274,8 @@ p {
 // Hero Section
 .hero-section {
   background: var(--primary-gradient);
-  padding: 8rem 0 6rem;
-  min-height: 100vh;
+  padding: 2rem 0; // Reduced padding significantly
+  min-height: 80vh; // Reduced from 100vh to 80vh
   display: flex;
   align-items: center;
   position: relative;
@@ -341,6 +350,11 @@ p {
       transform: scale(1.05);
     }
   }
+}
+
+// Main Content - Global fixed header spacing
+main {
+  padding-top: calc(var(--header-height) + 0.5rem);
 }
 
 // Features Section
@@ -525,6 +539,15 @@ p {
     --h1-size: 2.5rem;
     --h2-size: 2rem;
     --section-padding: 4rem 0;
+    --header-height: var(--mobile-header-height); // Use mobile header height
+  }
+  
+  html {
+    scroll-padding-top: var(--mobile-header-height);
+  }
+  
+  main {
+    padding-top: calc(var(--mobile-header-height) + 0.5rem);
   }
   
   .nav-menu {
@@ -622,7 +645,8 @@ p {
   }
   
   .hero-section {
-    padding: 6rem 0 4rem;
+    padding: 1.5rem 0; // Reduced mobile padding
+    min-height: 70vh; // Slightly smaller on mobile
   }
   
   .hero-image .app-screenshots {

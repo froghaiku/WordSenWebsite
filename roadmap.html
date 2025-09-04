@@ -96,18 +96,31 @@ permalink: /roadmap/
 <style>
 .roadmap-header {
     background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+    min-height: 180px; /* Slightly larger header */
+    padding-top: 0; /* Let flexbox centering handle positioning */
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 24vh;
     text-align: center;
+    box-sizing: border-box; /* Ensure padding is included in height calculations */
+}
+
+.roadmap-header h1 {
+    margin: 0;
+    font-size: 3.5rem; /* Same as dev blog header */
+}
+
+.roadmap-header p {
+    margin: 0.5rem 0 0 0; /* Reduced margin */
+    font-size: 1rem; /* Smaller font size */
+}
+
+.roadmap-header .section-header {
+    margin-bottom: 0; /* Remove bottom margin */
 }
 
 .roadmap-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    padding: 0 1.5rem; /* Reduce container padding */
 }
 
 
@@ -328,7 +341,12 @@ permalink: /roadmap/
 /* Responsive Design */
 @media (max-width: 768px) {
     .roadmap-header {
-        min-height: 20vh;
+        min-height: 180px; /* Slightly larger header (mobile) */
+        padding-top: 0; /* Let flexbox centering handle positioning */
+    }
+    
+    .roadmap-header h1 {
+        font-size: 2.5rem; /* Mobile h1 size to match dev blog */
     }
     
     .roadmap-nav {

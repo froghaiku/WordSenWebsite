@@ -18,45 +18,33 @@ permalink: /features/motivational-pet/
     <div class="container">
         <div class="feature-grid">
             <div class="feature-text">
-                <h2>More Than Just Study - It's Adventure</h2>
-                <p>Meet your personal Japanese learning companion! This isn't just a virtual pet – it's a <strong>motivational partner</strong> that thrives on your vocabulary progress and celebrates every milestone with you.</p>
+                <h2>Harness Your Natural Caregiving Instincts</h2>
+                <p>Humans are naturally wired to care for others – and that includes adorable digital companions. After each study session, you get the intrinsic reward of nurturing your Kitsune, triggering that satisfying dopamine hit that makes you want to study again.</p>
                 
-                <h3>Grows With Your Learning</h3>
-                <p>Your pet's development mirrors your Japanese journey:</p>
-                <ul class="feature-list">
-                    <li>Starts as a young companion when you begin learning</li>
-                    <li>Evolves and grows stronger with each word you master</li>
-                    <li>Unlocks new abilities as you reach vocabulary milestones</li>
-                    <li>Reflects your dedication through its health and happiness</li>
-                </ul>
+                <p>This isn't about forcing yourself to study through guilt or pressure. It's about building positive momentum through genuine reward. When studying becomes the pathway to caring for something you enjoy, motivation flows naturally. The Kitsune pet was the final piece that transformed studying from a chore into something I actually looked forward to.</p>
                 
-                <h3>Interactive Motivation System</h3>
-                <ul class="feature-list">
-                    <li><strong>Daily Check-ins:</strong> Your pet greets you and shows study progress</li>
-                    <li><strong>Study Celebrations:</strong> Cheers you on during successful reviews</li>
-                    <li><strong>Gentle Reminders:</strong> Friendly nudges when you've been away too long</li>
-                    <li><strong>Achievement Reactions:</strong> Special animations for learning milestones</li>
-                </ul>
+                <h3>Meet Your Kitsune</h3>
+                <p>Inspired by the Tamagotchi pet games I loved as a kid, when you study with WordSen you earn energy to take care of your Kitsune – a supernatural fox creature from Japanese folklore.</p>
                 
-                <h3>Gamified Learning Experience</h3>
-                <ul class="feature-list">
-                    <li><strong>XP and Levels:</strong> Both you and your pet gain experience together</li>
-                    <li><strong>Study Streaks:</strong> Consecutive study days boost your pet's mood</li>
-                    <li><strong>Customization:</strong> Unlock accessories and environments as you progress</li>
-                    <li><strong>Unity Integration:</strong> Immersive 3D interactions in the game environment</li>
-                </ul>
+                <p>You can feed it, teach it tricks, and decorate its house so it has a wonderful place to live. The more you study, the more energy you earn to keep your Kitsune happy and thriving.</p>
                 
-                <h3>Psychology of Companionship</h3>
-                <p>Research shows that <strong>emotional connection</strong> significantly improves learning retention. Your WordSen pet:</p>
-                <ul class="feature-list">
-                    <li>Creates positive associations with study time</li>
-                    <li>Provides immediate feedback and encouragement</li>
-                    <li>Makes consistency feel rewarding rather than burdensome</li>
-                    <li>Transforms solitary study into a shared experience</li>
-                </ul>
+                <h3>Building Positive Study Momentum</h3>
+                <p>The magic happens when you experience that rewarding cycle: study → earn energy → care for your Kitsune → feel accomplished → want to study more. This positive feedback loop builds momentum naturally, without relying on guilt or pressure.</p>
+                
+                <p>Your Kitsune thrives when you study consistently, becoming more animated and unlocking new interactions. It's not about maintaining perfect streaks – it's about creating positive associations with learning that make you genuinely want to return to your studies.</p>
+                
+                <h3>Cozy Game Elements for Dopamine</h3>
+                <p>Let's be honest – flashcard studying is boring, no matter how you slice it. I've incorporated cozy game elements to give you that dopamine hit you've earned after a study session:</p>
+                
+                • <strong>Feed your Kitsune</strong> with energy earned from studying<br>
+                • <strong>Teach it new tricks</strong> as you master vocabulary milestones<br>
+                • <strong>Decorate its living space</strong> with items unlocked through consistent study<br>
+                • <strong>Watch it thrive</strong> as your Japanese vocabulary grows<br>
+                
+                <p>This isn't just gamification for the sake of it – it's solving the real problem of maintaining motivation for the sometimes tedious work of vocabulary memorization. Your Kitsune makes every study session worthwhile.</p>
                 
                 <div class="feature-cta">
-                    <a href="#" class="btn btn-primary btn-large">Meet Your Learning Companion</a>
+                    <a href="{{ '/beta' | relative_url }}" class="btn btn-primary btn-large">Meet Your Kitsune</a>
                 </div>
             </div>
             
@@ -129,18 +117,31 @@ permalink: /features/motivational-pet/
 <style>
 .feature-header {
     background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    min-height: 180px; /* Same as other headers */
+    padding-top: 0; /* Let flexbox centering handle positioning */
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 24vh;
     text-align: center;
+    box-sizing: border-box; /* Ensure padding is included in height calculations */
+}
+
+.feature-header h1 {
+    margin: 0;
+    font-size: 3.5rem; /* Same as other headers */
+}
+
+.feature-header p {
+    margin: 0.5rem 0 0 0; /* Reduced margin */
+    font-size: 1rem; /* Smaller font size */
+}
+
+.feature-header .section-header {
+    margin-bottom: 0; /* Remove bottom margin */
 }
 
 .feature-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    padding: 0 1.5rem; /* Reduce container padding */
 }
 
 .feature-content {
@@ -353,7 +354,12 @@ permalink: /features/motivational-pet/
 
 @media (max-width: 768px) {
     .feature-header {
-        min-height: 20vh;
+        min-height: 180px; /* Same as other headers (mobile) */
+        padding-top: 0; /* Let flexbox centering handle positioning */
+    }
+    
+    .feature-header h1 {
+        font-size: 2.5rem; /* Mobile h1 size to match other headers */
     }
     
     .feature-grid {

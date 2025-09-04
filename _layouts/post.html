@@ -5,6 +5,7 @@ layout: default
 <article class="post">
     <header class="post-header">
         <div class="container">
+            <h1 class="post-title">{{ page.title }}</h1>
             <div class="post-meta">
                 <time datetime="{{ page.date | date_to_xmlschema }}">
                     {{ page.date | date: "%B %d, %Y" }}
@@ -13,7 +14,6 @@ layout: default
                     <span class="post-author">by {{ page.author }}</span>
                 {% endif %}
             </div>
-            <h1 class="post-title">{{ page.title }}</h1>
             {% if page.subtitle %}
                 <p class="post-subtitle">{{ page.subtitle }}</p>
             {% endif %}
@@ -56,14 +56,20 @@ layout: default
 <style>
 .post-header {
     background: linear-gradient(135deg, #f0f4ff 0%, #e6f3ff 100%);
-    padding: 8rem 0 4rem;
+    min-height: 180px; /* Same as other headers */
+    padding-top: 0; /* Let flexbox centering handle positioning */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    box-sizing: border-box; /* Ensure padding is included in height calculations */
 }
 
 .post-meta {
     color: #718096;
     font-size: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 0.5rem; /* Space below title */
+    text-align: center; /* Center the date */
 }
 
 .post-author {
@@ -72,10 +78,14 @@ layout: default
 
 .post-title {
     color: #2d3748;
-    font-size: 3rem;
+    font-size: 3.5rem; /* Standard header font size */
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin: 0; /* Remove default margin for consistent spacing */
     line-height: 1.2;
+}
+
+.post-header .container {
+    padding: 0 1.5rem; /* Reduce container padding to match other headers */
 }
 
 .post-subtitle {
@@ -228,8 +238,13 @@ layout: default
 }
 
 @media (max-width: 768px) {
+    .post-header {
+        min-height: 180px; /* Same as other headers (mobile) */
+        padding-top: 0; /* Let flexbox centering handle positioning */
+    }
+    
     .post-title {
-        font-size: 2rem;
+        font-size: 2.5rem; /* Mobile h1 size to match other headers */
     }
     
     .post-subtitle {

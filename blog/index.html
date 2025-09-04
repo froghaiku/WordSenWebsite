@@ -44,20 +44,35 @@ description: Development updates, insights, and technical thoughts from the Word
 <style>
 .blog-header {
     background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    min-height: 180px; /* Same as other headers */
+    padding-top: 0; /* Let flexbox centering handle positioning */
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 24vh;
     text-align: center;
+    box-sizing: border-box; /* Ensure padding is included in height calculations */
     position: relative;
     overflow: hidden;
 }
 
+.blog-header h1 {
+    margin: 0;
+    font-size: 3.5rem; /* Standard header font size */
+}
+
+.blog-header p {
+    margin: 0.5rem 0 0 0; /* Reduced margin */
+    font-size: 1rem; /* Smaller font size */
+}
+
+.blog-header .section-header {
+    margin-bottom: 0; /* Remove bottom margin */
+    position: relative;
+    z-index: 1;
+}
+
 .blog-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    padding: 0 1.5rem; /* Reduce container padding */
 }
 
 .blog-header::before {
@@ -69,11 +84,6 @@ description: Development updates, insights, and technical thoughts from the Word
     bottom: 0;
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0)"/></radialGradient></defs><circle cx="200" cy="300" r="100" fill="url(%23a)"/><circle cx="800" cy="200" r="150" fill="url(%23a)"/><circle cx="600" cy="700" r="120" fill="url(%23a)"/></svg>');
     opacity: 0.5;
-}
-
-.blog-header .section-header {
-    position: relative;
-    z-index: 1;
 }
 
 .blog-content {
@@ -155,7 +165,12 @@ description: Development updates, insights, and technical thoughts from the Word
 
 @media (max-width: 768px) {
     .blog-header {
-        min-height: 20vh;
+        min-height: 180px; /* Same as other headers (mobile) */
+        padding-top: 0; /* Let flexbox centering handle positioning */
+    }
+    
+    .blog-header h1 {
+        font-size: 2.5rem; /* Mobile h1 size to match other headers */
     }
 }
 </style>

@@ -18,39 +18,27 @@ permalink: /features/enhanced-flashcards/
     <div class="container">
         <div class="feature-grid">
             <div class="feature-text">
-                <h2>Beyond Traditional Flashcards</h2>
-                <p>WordSen's enhanced flashcards use <strong>intelligent spaced repetition</strong> to show you exactly the right word at exactly the right time. No more endless drilling – just efficient, personalized learning.</p>
+                <h2>Flashcards Built to Remember</h2>
+                <p>WordSen's flashcards contain all the elements you need to build strong memory connections in your brain. Inspired by the best features of successful Japanese learning decks, but designed to be even more effective.</p>
                 
-                <h3>Smart Timing Algorithm</h3>
-                <p>Our algorithm learns from your performance and adjusts review timing:</p>
-                <ul class="feature-list">
-                    <li>Words you struggle with appear more frequently</li>
-                    <li>Mastered words space out automatically</li>
-                    <li>Reviews happen just before you'd forget</li>
-                    <li>Optimal learning efficiency without burnout</li>
-                </ul>
+                <p>After struggling with generic Anki decks, I found the J-Labs Beginner Course which had images along with every card. I just seemed to remember those words better! This experience was confirmed in Gabriel Wyner's book "Fluent Forever" – images drastically increase memory retention because of how visual our brain is, and hand-making flashcards helps improve memory by tying a real experience to the new word.</p>
                 
-                <h3>Rich Context, Not Just Translation</h3>
-                <p>Each card includes:</p>
-                <ul class="feature-list">
-                    <li>Multiple example sentences in natural Japanese</li>
-                    <li>Audio pronunciation by native speakers</li>
-                    <li>Visual memory aids and mnemonics</li>
-                    <li>Related words and kanji connections</li>
-                    <li>Cultural context when relevant</li>
-                </ul>
+                <h3>Everything You Need in One Card</h3>
+                <p>Every WordSen flashcard includes:</p>
                 
-                <h3>Multiple Learning Modes</h3>
-                <p>Practice the way that works best for you:</p>
-                <ul class="feature-list">
-                    <li>Recognition: Japanese → English</li>
-                    <li>Production: English → Japanese</li>
-                    <li>Listening: Audio-only challenges</li>
-                    <li>Writing: Practice hiragana, katakana, and kanji</li>
-                </ul>
+                • <strong>Full Japanese sentences</strong> so you learn words in context (not just isolated vocabulary)<br>
+                • <strong>Furigana above all kanji</strong> so you can read without knowing thousands of characters<br>
+                • <strong>Romanji for the core word</strong> just in case you're a super beginner<br>
+                • <strong>Male and Female AI generated audio</strong> saying the example sentence<br>
+                • <strong>Customized images</strong> for every flashcard to boost memory retention
+                
+                <h3>Your Personal Image Collection</h3>
+                <p>Here's where WordSen gets really personal: every flashcard has an image you can customize. Take a picture with your phone camera or upload one from your favorite movie or anime. This "hand-making" process dramatically improves memory retention.</p>
+                
+                <p>Don't worry about privacy – your images are stored only locally on your device. WordSen is privacy-first, so no one can see your flashcard images but you. When you switch phones, there's a handy export feature to move your customized images easily.</p>
                 
                 <div class="feature-cta">
-                    <a href="#" class="btn btn-primary btn-large">Experience Smart Flashcards</a>
+                    <a href="{{ '/beta' | relative_url }}" class="btn btn-primary btn-large">Join the Beta Test</a>
                 </div>
             </div>
             
@@ -87,18 +75,31 @@ permalink: /features/enhanced-flashcards/
 <style>
 .feature-header {
     background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    min-height: 180px; /* Same as roadmap header */
+    padding-top: 0; /* Let flexbox centering handle positioning */
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 24vh;
     text-align: center;
+    box-sizing: border-box; /* Ensure padding is included in height calculations */
+}
+
+.feature-header h1 {
+    margin: 0;
+    font-size: 3.5rem; /* Same as dev blog header */
+}
+
+.feature-header p {
+    margin: 0.5rem 0 0 0; /* Reduced margin */
+    font-size: 1rem; /* Smaller font size */
+}
+
+.feature-header .section-header {
+    margin-bottom: 0; /* Remove bottom margin */
 }
 
 .feature-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    padding: 0 1.5rem; /* Reduce container padding */
 }
 
 .feature-content {
@@ -251,7 +252,12 @@ permalink: /features/enhanced-flashcards/
 
 @media (max-width: 768px) {
     .feature-header {
-        min-height: 20vh;
+        min-height: 180px; /* Same as roadmap header (mobile) */
+        padding-top: 0; /* Let flexbox centering handle positioning */
+    }
+    
+    .feature-header h1 {
+        font-size: 2.5rem; /* Mobile h1 size to match dev blog */
     }
     
     .feature-grid {
