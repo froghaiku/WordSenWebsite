@@ -18,7 +18,7 @@ permalink: /roadmap/
     <div class="container">
         <div class="roadmap-nav">
             <a href="#recent-updates" class="roadmap-nav-link active">Recent Updates</a>
-            <a href="#coming-soon" class="roadmap-nav-link">Coming Soon</a>
+            <a href="#coming-soon" class="roadmap-nav-link">Feature Requests</a>
         </div>
 
         <!-- Recent Updates Section -->
@@ -56,37 +56,19 @@ permalink: /roadmap/
             </div>
         </div>
 
-        <!-- Coming Soon Section -->
+        <!-- Feature Requests Section -->
         <div id="coming-soon" class="roadmap-section">
             <div class="section-header">
-                <h2>Coming Soon</h2>
-                <p>Here's what I'm planning for WordSen's future</p>
+                <h2>Feature Requests</h2>
+                <p>Share your ideas and help shape WordSen's future! Vote on features you'd love to see.</p>
             </div>
             
-            <div class="roadmap-grid">
-                {% for item in site.data.roadmap %}
-                <div class="roadmap-card {{ item.status }}">
-                    <div class="roadmap-status">
-                        {% if item.status == 'development' %}
-                            <span class="status-badge development">🚧 In Development</span>
-                        {% elsif item.status == 'planning' %}
-                            <span class="status-badge planning">📋 Planning</span>
-                        {% else %}
-                            <span class="status-badge research">🔍 Research</span>
-                        {% endif %}
-                    </div>
-                    <h3>{{ item.title }}</h3>
-                    <p class="roadmap-timeline">Target: {{ item.timeline }}</p>
-                    <p class="roadmap-description">{{ item.description }}</p>
-                    {% if item.features %}
-                    <ul class="roadmap-features">
-                        {% for feature in item.features %}
-                        <li>{{ feature }}</li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-                </div>
-                {% endfor %}
+            <div class="canny-board-container">
+                <iframe src="https://wordsen.canny.io/feature-requests" 
+                        class="canny-board"
+                        title="WordSen Feature Requests"
+                        frameborder="0">
+                </iframe>
             </div>
         </div>
 
@@ -337,6 +319,21 @@ permalink: /roadmap/
     color: var(--accent-color);
 }
 
+/* Canny Board Styles */
+.canny-board-container {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.canny-board {
+    width: 100%;
+    height: 800px;
+    border: none;
+    display: block;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -375,6 +372,10 @@ permalink: /roadmap/
     .roadmap-grid {
         grid-template-columns: 1fr;
     }
+    
+    .canny-board {
+        height: 600px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -394,6 +395,10 @@ permalink: /roadmap/
     
     .roadmap-card {
         padding: 1.5rem;
+    }
+    
+    .canny-board {
+        height: 500px;
     }
 }
 </style>
