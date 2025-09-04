@@ -63,12 +63,8 @@ permalink: /roadmap/
                 <p>Share your ideas and help shape WordSen's future! Vote on features you'd love to see.</p>
             </div>
             
-            <div class="canny-board-container">
-                <iframe src="https://wordsen.canny.io/feature-requests" 
-                        class="canny-board"
-                        title="WordSen Feature Requests"
-                        frameborder="0">
-                </iframe>
+            <div class="canny-widget-container">
+                <div data-canny></div>
             </div>
         </div>
 
@@ -319,20 +315,15 @@ permalink: /roadmap/
     color: var(--accent-color);
 }
 
-/* Canny Board Styles */
-.canny-board-container {
+/* Canny Widget Styles */
+.canny-widget-container {
     background: var(--card-bg);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     overflow: hidden;
     margin-top: 2rem;
-}
-
-.canny-board {
-    width: 100%;
-    height: 800px;
-    border: none;
-    display: block;
+    padding: 1rem;
+    min-height: 600px;
 }
 
 /* Responsive Design */
@@ -373,8 +364,9 @@ permalink: /roadmap/
         grid-template-columns: 1fr;
     }
     
-    .canny-board {
-        height: 600px;
+    .canny-widget-container {
+        padding: 0.5rem;
+        min-height: 500px;
     }
 }
 
@@ -397,8 +389,9 @@ permalink: /roadmap/
         padding: 1.5rem;
     }
     
-    .canny-board {
-        height: 500px;
+    .canny-widget-container {
+        padding: 0.25rem;
+        min-height: 400px;
     }
 }
 </style>
@@ -429,5 +422,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+});
+</script>
+
+<!-- Canny Widget Script -->
+<script>
+!function(w,d,i,s){function l(){if(!d.getElementById(i)){var f=d.getElementsByTagName(s)[0],e=d.createElement(s);e.type="text/javascript",e.async=!0,e.src="https://canny.io/sdk.js",f.parentNode.insertBefore(e,f)}}if("function"!=typeof w.Canny){var c=function(){c.q.push(arguments)};c.q=[],w.Canny=c,"complete"===d.readyState?l():w.attachEvent?w.attachEvent("onload",l):w.addEventListener("load",l,!1)}}(window,document,"canny-jssdk","script");
+
+Canny('render', {
+  boardToken: '14bb99f8-9c75-a334-1873-083537d419fe',
+  basePath: null,
+  ssoToken: null,
+  theme: 'light',
 });
 </script>
