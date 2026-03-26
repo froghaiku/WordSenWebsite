@@ -1,24 +1,123 @@
 # Recent Updates / Changelog
 # Add new updates to the top of this list
 
+- version: "0.9.2"
+  date: "2026-03-23"
+  title: "Oracle AI Redesign"
+  type: "improvement"
+  description: "Rebuilt the Oracle AI assistant with a cleaner layout, voice input for hands-free questions, and a personal notebook for saving insights."
+  items:
+    - "Two-tab design: Ask questions and save Notes"
+    - "Voice input so you can ask without typing"
+    - "Personal notebook for saving what you learn"
+
+- version: "0.9.1"
+  date: "2026-03-20"
+  title: "Card Creation Speed Boost"
+  type: "improvement"
+  description: "Moved sentence generation and text-to-speech to the cloud. Creating a new flashcard went from 15 seconds down to about 4."
+  items:
+    - "Cloud-powered AI sentence generation"
+    - "Faster text-to-speech audio creation"
+    - "Card creation now takes ~4 seconds"
+
+- version: "0.9.0"
+  date: "2026-03-10"
+  title: "Word List and Vocabulary Browser"
+  type: "feature"
+  description: "Built a new way to browse all your vocabulary organized by learning status with level-based sections and filter options."
+  items:
+    - "See words by status: Up for Review, In Progress, Mastered"
+    - "Filter pills to quickly find what you need"
+    - "Level badges showing your progress through 1,000 words"
+
+- version: "0.8.2"
+  date: "2026-03-15"
+  title: "Security and Privacy Upgrade"
+  type: "improvement"
+  description: "Comprehensive security audit with database protection rules, encrypted credential storage, and privacy-safe logging."
+  items:
+    - "Firebase database security rules"
+    - "Encrypted storage for sensitive data"
+    - "Removed personal data from logs"
+
+- version: "0.8.1"
+  date: "2026-02-15"
+  title: "Pet Care: Treats and Petting"
+  type: "feature"
+  description: "Full pet care system with three treat types (Dango, Mochi, Taiyaki) that give study buffs, plus a petting action with floating hearts."
+  items:
+    - "Three treat types, each with a one-hour study buff"
+    - "Pet your Kitsune with floating heart animations"
+    - "Treats earned through studying"
+
+- version: "0.8.0"
+  date: "2026-02-01"
+  title: "Koin Search Mini-Game"
+  type: "feature"
+  description: "A hide-and-seek activity where your fox sniffs out buried koins with a celebration animation and particle effects."
+  items:
+    - "Fox sniffs and digs to find hidden koins"
+    - "Celebration animations when koins are found"
+    - "Spend koins on furniture for the fox's room"
+
+- version: "0.7.1"
+  date: "2026-01-15"
+  title: "Smarter Fox Movement"
+  type: "improvement"
+  description: "Rebuilt the fox's movement system from scratch. The Kitsune now navigates more naturally around furniture and responds faster to interactions."
+  items:
+    - "More natural pathfinding around obstacles"
+    - "Close-up cameras during feeding and petting"
+    - "Smoother animations between actions"
+
+- version: "0.7.0"
+  date: "2025-12-15"
+  title: "Furniture Store and Room Decoration"
+  type: "feature"
+  description: "Added a furniture store, inventory, and room placement system so you can decorate your Kitsune's home with items purchased using koins."
+  items:
+    - "Furniture store with multiple categories"
+    - "Drag-and-drop room placement"
+    - "Inventory system for purchased items"
+
+- version: "0.6.0"
+  date: "2025-11-15"
+  title: "Kitsune Fox Comes to Life"
+  type: "feature"
+  description: "Imported the 3D Kitsune fox with a full animation system. Your fox can idle, walk, run, and react to your touches."
+  items:
+    - "3D fox model with smooth animations"
+    - "Interactive camera inspired by Monument Valley"
+    - "Fox responds to taps and gestures"
+
+- version: "0.5.0"
+  date: "2025-10-15"
+  title: "Enhanced Flashcard System"
+  type: "feature"
+  description: "Launched the core flashcard experience with spaced repetition, custom images, furigana, and dual-voice audio on every card."
+  items:
+    - "Spaced repetition algorithm for optimal review timing"
+    - "Male and female AI-generated audio"
+    - "Custom image uploads for each flashcard"
+    - "Furigana above all kanji"
+
+- version: "0.4.0"
+  date: "2025-09-15"
+  title: "Voice Card Creation"
+  type: "feature"
+  description: "Added the ability to record a Japanese word with your voice and have WordSen automatically create a full flashcard with audio and example sentences."
+  items:
+    - "Voice recording with AI transcription"
+    - "Automatic sentence generation"
+    - "AI-powered audio for new cards"
+
 - version: "0.2.0"
   date: "2025-08-29"
-  title: "Website Launch & Contact System"
-  type: "feature" # feature, improvement, fix
-  description: "Launched the new WordSen website with contact form, responsive design, and modern architecture."
-  items:
-    - "Brand new responsive website design"
-    - "Contact form with Formspree integration"
-    - "Mobile-first navigation with smooth animations"
-    - "SEO optimization and performance improvements"
-
-- version: "0.1.0"
-  date: "2025-08-15"
-  title: "Project Kickoff"
+  title: "Website Launch"
   type: "feature"
-  description: "Started development of WordSen - the Japanese vocabulary learning app."
+  description: "Launched the WordSen website with dev blog, contact form, and beta signup."
   items:
-    - "Initial app concept and design"
-    - "Core spaced repetition algorithm research"
-    - "UI/UX wireframes and prototypes"
-    - "Essential 1,000 words list curation"
+    - "Responsive website design"
+    - "Dev blog for build updates"
+    - "Beta test signup"

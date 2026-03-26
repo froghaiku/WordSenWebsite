@@ -3,7 +3,10 @@
     "allow": [
       "Bash(gem install:*)",
       "Bash(git add:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(git commit:*)",
+      "WebSearch",
+      "WebFetch(domain:help.canny.io)"
     ],
     "deny": [],
     "ask": []

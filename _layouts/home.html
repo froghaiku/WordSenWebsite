@@ -2,63 +2,136 @@
 layout: default
 ---
 
-<!-- Hero Section -->
-<section class="hero-section">
+<!-- Hero -->
+<section class="hero">
     <div class="container">
         <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">Cracking the 'motivation' code for studying Japanese</h1>
-                <p class="hero-subtitle">Stay motivated using custom vocab, games, and memory enhancing flashcards.</p>
-                <div class="hero-cta">
-                    <a href="{{ '/beta' | relative_url }}" class="btn btn-primary">Join the Beta Test</a>
-                    <a href="#features" class="btn btn-secondary">Learn More</a>
-                </div>
+            <h1>Learn 1,000 Japanese Words Without Losing Motivation</h1>
+            <p class="hero-subtitle">Most people quit Japanese before they learn enough words to do anything fun with the language. WordSen gets you through the hardest part (the first 1,000 words) by turning studying into a cozy game with a virtual pet fox.</p>
+            <div class="hero-cta">
+                <a href="{{ '/beta' | relative_url }}" class="btn btn-primary btn-large">Join the Beta</a>
             </div>
-            <div class="hero-image">
-                <img src="{{ '/assets/images/Together Iphons.png' | relative_url }}" alt="WordSen App Screenshots" class="app-screenshots">
+        </div>
+        <div class="hero-image">
+            <!-- TODO: Replace with app screenshots -->
+            <div class="img-placeholder img-placeholder-tall">
+                <strong>APP SCREENSHOT</strong>
+                Screenshot of the flashcard study screen showing a Japanese word with furigana, custom image, and audio buttons. Ideally two iPhones side by side. (Or use a GIF of flipping through a few cards.)
             </div>
         </div>
     </div>
 </section>
 
-<!-- Features Section -->
-<section class="features-section" id="features">
+<!-- The Problem -->
+<section class="problem-section">
     <div class="container">
-        <div class="section-header">
-            <h2>What makes WordSen different?</h2>
-            <p>Discover the features that make learning Japanese vocabulary effortless and effective.</p>
+        <div class="problem-content">
+            <h2>You know this cycle</h2>
+            <p>You download a language app, learn a few words, feel great. A week later the flashcards pile up. You miss a day. Then three. Then you've got 200 reviews waiting and opening the app feels like punishment.</p>
+            <p>You stop. Six months later you try again with something new. Same result.</p>
+            <p class="problem-punchline">The problem isn't the flashcards. It's that nobody's solved the motivation part.</p>
         </div>
-        
+    </div>
+</section>
+
+<!-- How It Works (3 cards) -->
+<section class="how-section" id="features">
+    <div class="container">
+        <h2 class="section-title">How WordSen is different</h2>
         <div class="features-grid">
             <div class="feature-card">
-                <div class="feature-icon">📱</div>
-                <h3>Built on Motivation</h3>
-                <p>Every feature in WordSen is designed to help you reach your goal of learning 1,000 words (and understaning basic Japanese!).</p>
+                <h3>1,000 Words. Clear Finish Line.</h3>
+                <p>Other apps throw thousands of random words at you with no end in sight. WordSen focuses on the 1,000 most common Japanese words, enough to understand most everyday conversations. Learn 5 a day and you're done in 7 months.</p>
             </div>
-            
             <div class="feature-card">
-                <div class="feature-icon">🎯</div>
-                <h3>Your Vocabulary</h3>
-                <p>I've currated the 1,000 most common Japanese words in the app, but I've also made it super easy to add other words you come across while studying.</p>
+                <h3>A Fox That Needs You</h3>
+                <p>Study flashcards, earn energy, take care of your Kitsune (a supernatural fox from Japanese folklore). It's a cozy game built around your study habit. When motivation runs out, and it will, your fox gives you a reason to open the app anyway.</p>
             </div>
-            
             <div class="feature-card">
-                <div class="feature-icon">📊</div>
-                <h3>Cozy Game Elements</h3>
-                <p>No matter how you slice it flashcard studying is boring. I've incorporated a cozy pet game to give you that dopamine hit you've earned after a quick study session</p>
+                <h3>Your Flashcard Hub</h3>
+                <p>I use Pimsleur and NativShark alongside WordSen. Neither one has a flashcard option worth using. When I hear a new word in a lesson, an anime, or a conversation, I just record it and WordSen creates a full flashcard with audio and example sentences. Keep using whatever tools you love. WordSen is where all that vocabulary comes together to actually stick.</p>
             </div>
-            
         </div>
     </div>
 </section>
 
-<!-- CTA Section -->
-<section class="cta-section">
+<!-- Feature Spotlights (image + text alternating rows) -->
+<section class="spotlight-section">
     <div class="container">
-        <div class="cta-content">
-            <h2>Ready to start your Japanese journey?</h2>
-            <p>Join thousands of learners already using WordSen to master Japanese vocabulary.</p>
-            <a href="{{ '/beta' | relative_url }}" class="btn btn-primary btn-large">Join the Beta Test</a>
+
+        <!-- Spotlight 1: Flashcards -->
+        <div class="spotlight-row">
+            <div class="spotlight-text">
+                <h3>Flashcards built to remember</h3>
+                <p>Every card has full Japanese sentences (not just isolated words), furigana above all kanji, male and female audio, and space for your own custom image. That last part is a big deal. Taking a photo for each card ties a real memory to the word, which is proven to improve retention.</p>
+            </div>
+            <div class="spotlight-visual">
+                <!-- TODO: Replace with flashcard screenshot -->
+                <div class="img-placeholder img-placeholder-wide" style="width:100%;">
+                    <strong>FLASHCARD SCREENSHOT</strong>
+                    A single flashcard showing: Japanese word + furigana on top, custom image in the middle, example sentence with English translation below, audio play buttons. Crop it clean.
+                </div>
+            </div>
+        </div>
+
+        <!-- Spotlight 2: Kitsune -->
+        <div class="spotlight-row reverse">
+            <div class="spotlight-text">
+                <h3>Meet your Kitsune</h3>
+                <p>Inspired by the Tamagotchi games I loved as a kid. Study with WordSen and you earn energy to feed your fox, teach it tricks, and decorate its house. The more you study, the happier your Kitsune. Miss too many days and your fox turns to stone. (You aren't a murderer... are you?)</p>
+            </div>
+            <div class="spotlight-visual">
+                <!-- TODO: Replace with Kitsune GIF -->
+                <div class="img-placeholder img-placeholder-wide" style="width:100%;">
+                    <strong>KITSUNE GIF</strong>
+                    A short GIF of the fox in its decorated room. Show the fox eating a treat, walking around, or doing a trick. This is your biggest visual differentiator. Make it look cozy and cute.
+                </div>
+            </div>
+        </div>
+
+        <!-- Spotlight 3: Add cards -->
+        <div class="spotlight-row">
+            <div class="spotlight-text">
+                <h3>Add words in seconds</h3>
+                <p>Watching Spy x Family and catch an interesting phrase? Just hit "add a word" and say it into your phone. WordSen uses AI to figure out what you said, generates audio from native speakers, builds an example sentence, and adds it to your study list. The next time you study, there it is.</p>
+            </div>
+            <div class="spotlight-visual">
+                <!-- TODO: Replace with card creation screenshot/GIF -->
+                <div class="img-placeholder img-placeholder-wide" style="width:100%;">
+                    <strong>CARD CREATION SCREENSHOT</strong>
+                    A screenshot or GIF of the "add a word" voice recording screen. Show the microphone button and the flow of recording a word. If a GIF, show the word being analyzed and turned into a flashcard.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Story / Credibility -->
+<section class="story-section">
+    <div class="container">
+        <div class="story-content">
+            <h2>Built from experience</h2>
+            <p>During my first trip to Japan I knew about 200 words. That was enough to order food, ask for directions, make (very!) small talk, and even handle a phone call where the operator spoke zero English.</p>
+            <p>If 200 words can do that, imagine what 1,000 can do. I'm building the tool I wish I had when I was starting out.</p>
+            <a href="{{ '/blog/' | relative_url }}" class="story-link">Read my full story &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<!-- Beta CTA -->
+<section class="beta-cta">
+    <div class="container">
+        <div class="beta-cta-content">
+            <h2>Beta launches April 2026</h2>
+            <p>I need people who are learning Japanese and will give me honest feedback about what works and what doesn't.</p>
+            <div class="beta-requirements">
+                <span>iPhone</span>
+                <span>Know hiragana & katakana</span>
+                <span>Willing to give feedback</span>
+            </div>
+            <p class="beta-tagline">Your Kitsune is waiting.</p>
+            <a href="{{ '/beta' | relative_url }}" class="btn btn-primary btn-large">Join the Beta</a>
         </div>
     </div>
 </section>

@@ -1,16 +1,14 @@
 ---
 layout: default
 title: Contact
-description: Get in touch with me about WordSen. I'd love to hear from you!
+description: Questions, feedback, or want to help test? I read everything.
 permalink: /contact/
 ---
 
-<section class="contact-header">
+<section class="page-header">
     <div class="container">
-        <div class="section-header">
-            <h1>Get in Touch</h1>
-            <p>I'd love to hear from you! Reach out with questions, feedback, or just to say hello.</p>
-        </div>
+        <h1>Say Hi</h1>
+        <p>I read everything. Really.</p>
     </div>
 </section>
 
@@ -18,64 +16,64 @@ permalink: /contact/
     <div class="container">
         <div class="contact-grid">
             <div class="contact-form-section">
-                <h3>Send a Message</h3>
+                <h3>Send me a message</h3>
                 <form class="contact-form" action="https://formspree.io/f/mdkleaeg" method="POST">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" required>
                     </div>
-                    
+
                     <div class="form-group">
-                        <label for="subject">Subject</label>
+                        <label for="subject">What's this about?</label>
                         <select id="subject" name="subject" required>
-                            <option value="">Choose a topic...</option>
-                            <option value="beta">Beta Testing</option>
-                            <option value="feedback">Feedback</option>
-                            <option value="support">Support</option>
-                            <option value="collaboration">Collaboration</option>
-                            <option value="other">Other</option>
+                            <option value="">Pick one...</option>
+                            <option value="beta">I want to beta test</option>
+                            <option value="feedback">Feedback on the app</option>
+                            <option value="bug">Something's broken</option>
+                            <option value="other">Something else</option>
                         </select>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell me what's on your mind..." required></textarea>
+                        <textarea id="message" name="message" rows="6" placeholder="What's on your mind?" required></textarea>
                     </div>
-                    
+
                     <button type="submit" class="btn btn-primary btn-large">Send Message</button>
                     <input type="hidden" name="_next" value="{{ site.url }}/contact/?success=true">
                     <input type="hidden" name="_subject" value="New message from WordSen website">
                 </form>
-                
+
                 <p class="form-note">
-                    <small>I'll get back to you within 24-48 hours. Promise! 🤝</small>
+                    <small>I'll get back to you within a day or two.</small>
                 </p>
             </div>
-            
+
             <div class="contact-info">
-                <h3>Let's Connect</h3>
-                <p>Have questions about WordSen? Want to provide feedback on the beta? Or maybe you're interested in collaborating? I'm here to help!</p>
-                
+                <h3>Want to help me test?</h3>
+                <p>I'm looking for people who will actually use the app for a few weeks and tell me what they think. Not just "it's great!" but the real stuff. What's confusing, what's broken, what could be better.</p>
+                <p>If you're learning Japanese and have an iPhone, you're exactly who I need.</p>
+
                 <div class="contact-methods">
                     <div class="contact-method">
-                        <div class="contact-icon">🦋</div>
+                        <div class="contact-icon">&#x1f680;</div>
                         <div class="contact-details">
-                            <h4>BlueSky</h4>
-                            <a href="https://bsky.app/profile/kitsunelearning.bsky.social" target="_blank">@kitsunelearning</a>
+                            <h4>Join the Beta</h4>
+                            <p>Testing starts April 2026.</p>
+                            <a href="{{ '/beta' | relative_url }}" class="btn btn-primary">Sign Up</a>
                         </div>
                     </div>
-                    
+
                     <div class="contact-method">
-                        <div class="contact-icon">🚀</div>
+                        <div class="contact-icon">&#x1f98b;</div>
                         <div class="contact-details">
-                            <h4>Beta Testing</h4>
-                            <p>Interested in trying WordSen early?</p>
-                            <a href="{{ '/beta' | relative_url }}" class="btn btn-primary">Join Beta</a>
+                            <h4>Follow along on BlueSky</h4>
+                            <a href="https://bsky.app/profile/kitsunelearning.bsky.social" target="_blank">@kitsunelearning</a>
                         </div>
                     </div>
                 </div>
@@ -83,198 +81,3 @@ permalink: /contact/
         </div>
     </div>
 </section>
-
-<style>
-.contact-header {
-    background: linear-gradient(135deg, #fef9d7 0%, #d299c2 100%);
-    min-height: 180px; /* Same as roadmap header */
-    padding-top: 0; /* Let flexbox centering handle positioning */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    box-sizing: border-box; /* Ensure padding is included in height calculations */
-}
-
-.contact-header h1 {
-    margin: 0;
-    font-size: 3.5rem; /* Same as dev blog header */
-}
-
-.contact-header p {
-    margin: 0.5rem 0 0 0; /* Reduced margin */
-    font-size: 1rem; /* Smaller font size */
-}
-
-.contact-header .section-header {
-    margin-bottom: 0; /* Remove bottom margin */
-}
-
-.contact-header .container {
-    padding: 0 1.5rem; /* Reduce container padding */
-}
-
-.contact-content {
-    padding: 4rem 0;
-    background: var(--light-bg);
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.contact-info h3,
-.contact-form-section h3 {
-    color: #2d3748;
-    margin-bottom: 1.5rem;
-}
-
-.contact-methods {
-    margin-top: 2rem;
-}
-
-.contact-method {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: var(--card-bg);
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.contact-method:hover {
-    transform: translateY(-2px);
-}
-
-.contact-icon {
-    font-size: 2rem;
-    flex-shrink: 0;
-}
-
-.contact-details h4 {
-    color: #2d3748;
-    margin-bottom: 0.5rem;
-    font-size: 1.125rem;
-}
-
-.contact-details a {
-    color: var(--accent-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.contact-details a:hover {
-    color: var(--accent-hover);
-}
-
-.contact-details p {
-    color: #4a5568;
-    margin-bottom: 1rem;
-}
-
-.contact-form {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #2d3748;
-    font-weight: 500;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 0.875rem 1rem;
-    border: 2px solid #e2e8f0;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: inherit;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(221, 98, 69, 0.1);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.form-note {
-    text-align: center;
-    margin-top: 1rem;
-    color: #718096;
-}
-
-@media (max-width: 768px) {
-    .contact-header {
-        min-height: 180px; /* Same as roadmap header (mobile) */
-        padding-top: 0; /* Let flexbox centering handle positioning */
-    }
-    
-    .contact-header h1 {
-        font-size: 2.5rem; /* Mobile h1 size to match dev blog */
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-    
-    .contact-method {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-    }
-    
-    .contact-form {
-        padding: 1.5rem;
-    }
-    
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        font-size: 16px; /* Prevents zoom on iOS */
-    }
-}
-
-@media (max-width: 480px) {
-    .contact-header .section-header h1 {
-        font-size: 2rem;
-    }
-    
-    .contact-header .section-header p {
-        font-size: 1rem;
-    }
-    
-    .contact-form {
-        padding: 1.25rem;
-    }
-    
-    .form-group {
-        margin-bottom: 1.25rem;
-    }
-}
-</style>

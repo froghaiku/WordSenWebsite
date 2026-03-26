@@ -1,438 +1,132 @@
 ---
 layout: default
-title: Roadmap
-description: Track WordSen's development progress, see what's coming next, and request new features.
+title: "What I'm Building | WordSen"
+description: I work on WordSen every day. Here's what I've shipped and what's coming next.
 permalink: /roadmap/
 ---
 
-<section class="roadmap-header">
+<section class="page-header">
     <div class="container">
-        <div class="section-header">
-            <h1>WordSen Roadmap</h1>
-            <p>Follow along with WordSen's journey. See what's new, what's coming, and share your ideas!</p>
-        </div>
+        <h1>What I'm Building</h1>
+        <p>I work on WordSen every day. Here's what's happening.</p>
     </div>
 </section>
 
 <section class="roadmap-content">
     <div class="container">
-        <div class="roadmap-nav">
-            <a href="#recent-updates" class="roadmap-nav-link active">Recent Updates</a>
-            <a href="#coming-soon" class="roadmap-nav-link">Feature Requests</a>
+
+        <!-- Coming Next -->
+        <div class="coming-next">
+            <h2>Beta launches April 2026</h2>
+            <p>This is the big one. I'm opening up WordSen to real testers for the first time. The full flashcard system, the Kitsune pet game, voice card creation, and the Oracle AI. Everything I've been building for the past year and a half.</p>
+            <p>If you're learning Japanese and have an iPhone, I want you testing this.</p>
+            <a href="{{ '/beta' | relative_url }}" class="btn btn-primary btn-large">Join the Beta</a>
         </div>
 
-        <!-- Recent Updates Section -->
-        <div id="recent-updates" class="roadmap-section">
-            <div class="section-header">
-                <h2>Recent Updates</h2>
-                <p>Here's what I've been working on lately</p>
+        <!-- Update Log -->
+        <div class="update-log-header">
+            <h2>What I've shipped</h2>
+        </div>
+
+        <!-- March 2026 -->
+        <div class="update-month">
+            <div class="update-month-label">March 2026</div>
+
+            <div class="update-entry">
+                <h3>Card creation got FAST</h3>
+                <p>Moved the AI stuff to the cloud and card creation went from 15 seconds to about 4. That's a HUGE difference when you're trying to capture a word on the fly.</p>
             </div>
-            
-            <div class="updates-timeline">
-                {% for update in site.data.updates %}
-                <div class="timeline-item">
-                    <div class="timeline-marker {{ update.type }}">
-                        {% if update.type == 'feature' %}🚀{% elsif update.type == 'improvement' %}⚡{% else %}🔧{% endif %}
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>{{ update.title }}</h3>
-                            <div class="timeline-meta">
-                                <span class="version">{{ update.version }}</span>
-                                <span class="date">{{ update.date | date: "%B %d, %Y" }}</span>
-                            </div>
-                        </div>
-                        <p class="timeline-description">{{ update.description }}</p>
-                        {% if update.items %}
-                        <ul class="timeline-items">
-                            {% for item in update.items %}
-                            <li>{{ item }}</li>
-                            {% endfor %}
-                        </ul>
-                        {% endif %}
-                    </div>
-                </div>
-                {% endfor %}
+
+            <div class="update-entry">
+                <h3>Oracle learned to listen</h3>
+                <p>Redesigned the Oracle AI assistant. You can talk to it now instead of typing, and it has a personal notebook for saving what you learn. Two tabs: Ask and Notes. Clean and simple.</p>
+            </div>
+
+            <div class="update-entry">
+                <h3>Browse your whole vocabulary</h3>
+                <p>Built a word list so you can actually see everything you're studying. Filter by status (up for review, in progress, mastered) and watch your progress grow through all 1,000 words.</p>
+            </div>
+
+            <div class="update-entry">
+                <h3>Security lockdown</h3>
+                <p>Did a full security audit. Database protection rules, encrypted storage, cleaned up logging. Not glamorous, but REALLY important before letting other people use the app.</p>
             </div>
         </div>
 
-        <!-- Feature Requests Section -->
-        <div id="coming-soon" class="roadmap-section">
-            <div class="section-header">
-                <h2>Feature Requests</h2>
-                <p>Share your ideas and help shape WordSen's future! Vote on features you'd love to see.</p>
+        <!-- February 2026 -->
+        <div class="update-month">
+            <div class="update-month-label">February 2026</div>
+
+            <div class="update-entry">
+                <h3>Dango, mochi, and taiyaki</h3>
+                <p>Your Kitsune can eat three different treats now, each one giving a one-hour study buff. You can also pet your fox. Little hearts float up. It's adorable.</p>
             </div>
-            
-            <div class="canny-widget-container">
-                <div data-canny></div>
+
+            <div class="update-entry">
+                <h3>Hide and seek (but for koins)</h3>
+                <p>Added a mini-game where your fox sniffs out buried koins with a little celebration dance when it finds them. Spend the koins on furniture for the room.</p>
+            </div>
+        </div>
+
+        <!-- January 2026 -->
+        <div class="update-month">
+            <div class="update-month-label">January 2026</div>
+
+            <div class="update-entry">
+                <h3>The fox got smarter</h3>
+                <p>Rebuilt how the Kitsune moves around its room. It navigates furniture without getting stuck and looks way more natural. Also added close-up cameras for when you feed or pet it.</p>
+            </div>
+        </div>
+
+        <!-- December 2025 -->
+        <div class="update-month">
+            <div class="update-month-label">December 2025</div>
+
+            <div class="update-entry">
+                <h3>Furniture shopping!</h3>
+                <p>Added a store, an inventory system, and drag-and-drop room placement. Buy items with koins you earn from studying, then make your fox's room look however you want.</p>
+            </div>
+        </div>
+
+        <!-- November 2025 -->
+        <div class="update-month">
+            <div class="update-month-label">November 2025</div>
+
+            <div class="update-entry">
+                <h3>The Kitsune comes alive</h3>
+                <p>Imported the 3D fox model with full animations. Walking, running, idle, jumping. You can tap and swipe the camera around. This was the moment the app started feeling REAL.</p>
+            </div>
+        </div>
+
+        <!-- October 2025 -->
+        <div class="update-month">
+            <div class="update-month-label">October 2025</div>
+
+            <div class="update-entry">
+                <h3>Flashcards that actually work</h3>
+                <p>Launched the core study experience. Spaced repetition, male and female audio, custom images, furigana on everything. This is the foundation the whole app is built on.</p>
+            </div>
+        </div>
+
+        <!-- September 2025 -->
+        <div class="update-month">
+            <div class="update-month-label">September 2025</div>
+
+            <div class="update-entry">
+                <h3>Say it and study it</h3>
+                <p>Added voice card creation. Record a word, WordSen figures out what you said, generates audio and an example sentence, adds it to your deck. This was the feature that made me decide to build the whole app.</p>
+            </div>
+        </div>
+
+        <!-- August 2025 -->
+        <div class="update-month">
+            <div class="update-month-label">August 2025</div>
+
+            <div class="update-entry">
+                <h3>We're live</h3>
+                <p>Launched the WordSen website, started writing the dev blog, and opened beta signups.</p>
             </div>
         </div>
 
     </div>
 </section>
-
-<style>
-.roadmap-header {
-    background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
-    min-height: 180px; /* Slightly larger header */
-    padding-top: 0; /* Let flexbox centering handle positioning */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    box-sizing: border-box; /* Ensure padding is included in height calculations */
-}
-
-.roadmap-header h1 {
-    margin: 0;
-    font-size: 3.5rem; /* Same as dev blog header */
-}
-
-.roadmap-header p {
-    margin: 0.5rem 0 0 0; /* Reduced margin */
-    font-size: 1rem; /* Smaller font size */
-}
-
-.roadmap-header .section-header {
-    margin-bottom: 0; /* Remove bottom margin */
-}
-
-.roadmap-header .container {
-    padding: 0 1.5rem; /* Reduce container padding */
-}
-
-
-.roadmap-content {
-    padding: 4rem 0;
-    background: var(--light-bg);
-}
-
-/* Navigation Tabs */
-.roadmap-nav {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 4rem;
-    border-bottom: 2px solid #e2e8f0;
-}
-
-.roadmap-nav-link {
-    padding: 1rem 2rem;
-    text-decoration: none;
-    color: var(--text-medium);
-    font-weight: 500;
-    border-bottom: 3px solid transparent;
-    transition: all 0.3s ease;
-}
-
-.roadmap-nav-link:hover,
-.roadmap-nav-link.active {
-    color: var(--accent-color);
-    border-bottom-color: var(--accent-color);
-}
-
-.roadmap-section {
-    margin-bottom: 6rem;
-}
-
-/* Timeline Styles */
-.updates-timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.updates-timeline::before {
-    content: '';
-    position: absolute;
-    left: 30px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, var(--accent-color), var(--text-light));
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 3rem;
-    padding-left: 5rem;
-}
-
-.timeline-marker {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 60px;
-    height: 60px;
-    background: var(--card-bg);
-    border: 3px solid var(--accent-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    z-index: 1;
-}
-
-.timeline-marker.feature { border-color: #10b981; }
-.timeline-marker.improvement { border-color: #3b82f6; }
-.timeline-marker.fix { border-color: #f59e0b; }
-
-.timeline-content {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-}
-
-.timeline-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-}
-
-.timeline-header h3 {
-    margin: 0;
-    color: var(--text-dark);
-}
-
-.timeline-meta {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-.version {
-    background: var(--accent-color);
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.875rem;
-    font-weight: 600;
-}
-
-.date {
-    color: var(--text-light);
-    font-size: 0.875rem;
-}
-
-.timeline-description {
-    color: var(--text-medium);
-    margin-bottom: 1rem;
-}
-
-.timeline-items {
-    list-style: none;
-    padding: 0;
-}
-
-.timeline-items li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-medium);
-}
-
-.timeline-items li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: #10b981;
-    font-weight: bold;
-}
-
-/* Roadmap Grid */
-.roadmap-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.roadmap-card {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
-    border-top: 4px solid var(--text-light);
-}
-
-.roadmap-card.development { border-top-color: #f59e0b; }
-.roadmap-card.planning { border-top-color: #3b82f6; }
-.roadmap-card.research { border-top-color: #8b5cf6; }
-
-.roadmap-card:hover {
-    transform: translateY(-4px);
-}
-
-.roadmap-status {
-    margin-bottom: 1rem;
-}
-
-.status-badge {
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.875rem;
-    font-weight: 500;
-}
-
-.status-badge.development { background: #fef3c7; color: #d97706; }
-.status-badge.planning { background: #dbeafe; color: #2563eb; }
-.status-badge.research { background: #ede9fe; color: #7c3aed; }
-
-.roadmap-card h3 {
-    color: var(--text-dark);
-    margin-bottom: 0.5rem;
-}
-
-.roadmap-timeline {
-    color: var(--accent-color);
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.roadmap-description {
-    color: var(--text-medium);
-    margin-bottom: 1.5rem;
-}
-
-.roadmap-features {
-    list-style: none;
-    padding: 0;
-}
-
-.roadmap-features li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-medium);
-}
-
-.roadmap-features li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--accent-color);
-}
-
-/* Canny Widget Styles */
-.canny-widget-container {
-    background: var(--card-bg);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    overflow: hidden;
-    margin-top: 2rem;
-    padding: 1rem;
-    min-height: 600px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .roadmap-header {
-        min-height: 180px; /* Slightly larger header (mobile) */
-        padding-top: 0; /* Let flexbox centering handle positioning */
-    }
-    
-    .roadmap-header h1 {
-        font-size: 2.5rem; /* Mobile h1 size to match dev blog */
-    }
-    
-    .roadmap-nav {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .roadmap-nav-link {
-        padding: 0.75rem 1.5rem;
-        text-align: center;
-    }
-    
-    .timeline-item {
-        padding-left: 4rem;
-    }
-    
-    .timeline-header {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    
-    .timeline-meta {
-        justify-content: flex-start;
-    }
-    
-    .roadmap-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .canny-widget-container {
-        padding: 0.5rem;
-        min-height: 500px;
-    }
-}
-
-@media (max-width: 480px) {
-    .updates-timeline::before {
-        left: 20px;
-    }
-    
-    .timeline-item {
-        padding-left: 3rem;
-    }
-    
-    .timeline-marker {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-    }
-    
-    .roadmap-card {
-        padding: 1.5rem;
-    }
-    
-    .canny-widget-container {
-        padding: 0.25rem;
-        min-height: 400px;
-    }
-}
-</style>
-
-<script>
-// Simple tab navigation
-document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.roadmap-nav-link');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Remove active class from all links
-            navLinks.forEach(l => l.classList.remove('active'));
-            
-            // Add active class to clicked link
-            this.classList.add('active');
-            
-            // Smooth scroll to section
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-    
-});
-</script>
-
-<!-- Canny Widget Script -->
-<script>
-!function(w,d,i,s){function l(){if(!d.getElementById(i)){var f=d.getElementsByTagName(s)[0],e=d.createElement(s);e.type="text/javascript",e.async=!0,e.src="https://canny.io/sdk.js",f.parentNode.insertBefore(e,f)}}if("function"!=typeof w.Canny){var c=function(){c.q.push(arguments)};c.q=[],w.Canny=c,"complete"===d.readyState?l():w.attachEvent?w.attachEvent("onload",l):w.addEventListener("load",l,!1)}}(window,document,"canny-jssdk","script");
-
-Canny('render', {
-  boardToken: '14bb99f8-9c75-a334-1873-083537d419fe',
-  basePath: null,
-  ssoToken: null,
-  theme: 'light',
-});
-</script>
