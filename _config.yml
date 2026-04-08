@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Learn 1,000 essential Japanese words with WordSen's intelligent spaced 
   repetition system. Perfect for beginners and intermediate learners.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.wordsen.com" # the base hostname & protocol for your site
+url: "https://wordsen.com" # the base hostname & protocol for your site
 twitter_username: wordsen
 github_username:  froghaiku
 
@@ -32,6 +32,7 @@ github_username:  froghaiku
 # theme: minima  # Using custom theme
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default.
