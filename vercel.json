@@ -31,7 +31,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' https://wordsen.kit.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io https://wordsen.kit.com; frame-src https://wordsen.kit.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io"
+          "value": "default-src 'self'; script-src 'self' https://*.kit.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.kit.com; font-src 'self' https://fonts.gstatic.com https://*.kit.com; img-src 'self' data: https://*.kit.com https://embed.filekitcdn.com; connect-src 'self' https://formspree.io https://*.kit.com; frame-src https://*.kit.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io https://*.kit.com"
         }
       ]
     }
