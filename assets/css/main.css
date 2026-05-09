@@ -490,7 +490,10 @@ main { padding-top: var(--header-height); }
 /* ================================================
    HOMEPAGE - STORY
    ================================================ */
-.story-section { padding: 3rem 0 4rem; }
+.story-section {
+  padding: 4rem 0;
+  background: var(--bg-card);
+}
 .story-content {
   max-width: 640px;
   margin: 0 auto;
