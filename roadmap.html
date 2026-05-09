@@ -17,15 +17,85 @@ permalink: /roadmap/
 
         <!-- Coming Next -->
         <div class="coming-next">
-            <h2>Beta launches April 2026</h2>
-            <p>This is the big one. I'm opening up WordSen to real testers for the first time. The full flashcard system, the Kitsune pet game, voice card creation, and the Oracle AI. Everything I've been building for the past year and a half.</p>
-            <p>If you're learning Japanese and have an iPhone, I want you testing this.</p>
+            <h2>Beta launches late May 2026</h2>
+            <p>I aimed for April. I missed it. The app needed more polish before strangers used it, and I'd rather hand testers something solid than rush. The first wave is small (5-10 people) so I can act on feedback fast.</p>
+            <p>If you're learning Japanese and have an iPhone, get on the list. There will be more waves after the first one.</p>
             <a href="{{ '/beta' | relative_url }}" class="btn btn-primary btn-large">Join the Beta</a>
         </div>
 
         <!-- Update Log -->
         <div class="update-log-header">
             <h2>What I've shipped</h2>
+        </div>
+
+        <!-- May 2026 -->
+        <div class="update-month">
+            <div class="update-month-label">May 2026</div>
+
+            <div class="update-entry">
+                <h3>Charms</h3>
+                <p>Built a charm system. Before each study session you pick one of eight charms (if you have any) and it changes how you earn rewards for that session. Some give bonus koins. Some buff specific cards. One gives a chunky payout if you finish what you started. They drop after sessions, so you build up a collection over time. The end-of-session screen got a full visual rewrite to match.</p>
+            </div>
+
+            <div class="update-entry">
+                <h3>The trophy case</h3>
+                <p>The Word List used to look like a generic grid. Now mastered cards bear a kanji brushwork stamp tied to the level they came from. If you added an image to a card, it earns a red seal stamp on top of that. Scroll through 200 mastered cards months from now and you can SEE the work you put in. It's the wallpaper.</p>
+            </div>
+
+            <div class="update-entry">
+                <h3>Offline mode that actually works</h3>
+                <p>Found a nasty bug where rating a card with no internet would silently hang the app. Fixed it properly. The Study button now blocks when you're offline (with a clear message), and audio for cards you've already heard plays from a local cache. So if you're on the subway, your previously studied cards still work.</p>
+            </div>
+
+            <div class="update-entry">
+                <h3>Better animations everywhere</h3>
+                <p>Reworked how rewards feel. Energy and koins now fly across the screen as little chips that land in their pills with a satisfying pulse. The progress bar fills with a snappy spring. Layered haptics for the rating buttons. The whole study loop feels MUCH more alive.</p>
+            </div>
+
+            <div class="update-entry">
+                <h3>WordList loads instantly</h3>
+                <p>It used to take 1-2 seconds to open the Word List. That was unacceptable. Tracked it down to a calculation that was running about 2 million times per render. Cached the result. Now it's instant.</p>
+            </div>
+
+            <div class="update-entry">
+                <h3>Hide and delete</h3>
+                <p>You can now hide cards from your study list (for built-in words you already know cold) or delete cards you created. Hidden cards keep their progress in case you want to bring them back later.</p>
+            </div>
+        </div>
+
+        <!-- April 2026 -->
+        <div class="update-month">
+            <div class="update-month-label">April 2026</div>
+
+            <div class="update-entry">
+                <h3>The "MAX" energy fix</h3>
+                <p>If your energy was already maxed out, the app would still play the "+5 energy" animation when you finished a card. Felt dishonest. Now the pill just shows "MAX" and the animation only fires when energy actually goes up. Small change, but the kind of thing that adds up.</p>
+            </div>
+
+            <div class="update-entry">
+                <h3>Momentum celebration you can actually see</h3>
+                <p>The daily momentum hit had a tiny ring bump that nobody noticed. Now it's a full Balatro-style stamp with confetti and layered haptics. When you cross the line for the day, you KNOW.</p>
+            </div>
+
+            <div class="update-entry">
+                <h3>Typing got fixed</h3>
+                <p>Bug reports, card reports, and Oracle notes all had the same problem: the cursor would disappear under the keyboard while you were typing. Rebuilt those screens so the keyboard plays nice. Typing feels responsive now.</p>
+            </div>
+
+            <div class="update-entry">
+                <h3>New study header</h3>
+                <p>The top of the study screen used to be cluttered with progress info. Replaced it with a clean rainbow-arc progress ring and a display options menu (toggle furigana, romaji, English, image blur). Way less noise, easier to focus.</p>
+            </div>
+
+            <div class="update-entry">
+                <h3>Smarter bug reports</h3>
+                <p>Submitting a bug report used to require two taps (one for the report, one for diagnostics). Now it auto-attaches the diagnostic data when you send the report. One tap, both signals. Way better for me when I'm trying to figure out what went wrong.</p>
+            </div>
+
+            <div class="update-entry">
+                <h3>Cloud Functions live in production</h3>
+                <p>All six server-side functions are now running in production. Card creation, Oracle questions, audio generation, transcription, and the unlock pipeline all run on the cloud now. This makes everything faster AND more secure.</p>
+            </div>
         </div>
 
         <!-- March 2026 -->
