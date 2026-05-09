@@ -93,11 +93,20 @@ All paths relative to `assets/images/`. To activate: delete `<div class="phone-s
 ## Recent Work
 
 ### May 9, 2026 — Pre-Beta Marketing Push
-- **Beta page** (`/beta/`): full rewrite in Ben's voice. Three cards above the signup ("Who you are" / "What I need from you" / "What you get"), tight perk line under the form ("First 100 signups get 1,000 koins on launch day"). Removed AI-tell intro box and fabricated daily-usage claim that snuck through. Added missing `permalink: /beta/` frontmatter to fix initial 404.
-- **Homepage** (`_layouts/home.html`): added three feature-card illustrations (`stairs.png`, `fox.png`, `combine.png`) all locked to 200px height for cross-card alignment. Added `cycle.png` inside the "You know this cycle" white card. Bumped `.section-title` to 3rem (after iterating from 2rem → 4rem → 3rem) and `.spotlight-text h3` to 2.25rem. Rewrote Kitsune spotlight to drop the removed stone-fox punishment line and lean into "feels good to take care of your fox." Reframed Hub card around multi-app SRS fragmentation with "Nothing is in sync" as the punch.
-- **Roadmap** (`/roadmap/`): every shipped-feature entry trimmed to a single sentence; added a `Feature - Benefit` green-highlighted tagline to each H3; restyled so each MONTH is one centered 800px white card containing its entries (was per-entry cards); added 6 emojis spread across months. Coming-next timeline updated to "late May 2026" honest-slip framing.
+- **Beta page** (`/beta/`): full rewrite in Ben's voice. Three cards ("Who you are" / "What I need from you" / "What you get") above a green-checkmark requirement list ("Own an iPhone" / "Loves giving feedback" / "Knows some Hiragana / Katakana") above the signup form. Removed AI-tell intro and fabricated daily-usage claim. "Who you are" reframed to lower the Japanese-knowledge bar and pivot to honest+helpful as the real qualifier. Highlights on "Tell me what works, what doesn't, and what's confusing" (card 2) and "Plus 1,000 koins on launch day" (card 3). Added missing `permalink: /beta/` frontmatter (caught a 404 mid-session).
+- **Homepage** (`_layouts/home.html`):
+  - Three feature-card illustrations (`stairs.png`, `fox.png`, `combine.png`) all locked to 200px height for cross-card alignment.
+  - `cycle.png` inside the "You know this cycle" section.
+  - "You know this cycle" and "Built from experience" both converted from constrained white cards to **full-width white sections** with content centered at 640px.
+  - Section header rewrite: "How WordSen is different" → **"Three things that keep you studying"** (numeric promise + motivation framing baked in).
+  - `.section-title` iterated 2rem → 4rem → 3rem; `.spotlight-text h3` 1.5rem → 2.25rem.
+  - Kitsune spotlight rewritten (stone-fox punishment removed, positive feel emphasized).
+  - Hub card reframed around multi-app SRS fragmentation with "Nothing is in sync" punch.
+  - **Spotlight rows tightened twice**: container 1340px → 1200px → 1080px (~19% narrower than global), then phone column changed from `1fr` to fixed **360px** so the phone has only ~60px breathing room each side instead of 144px (the actual cause of the perceived "too much padding" feeling).
+- **Roadmap** (`/roadmap/`): every shipped-feature entry trimmed to a single sentence; added a `Feature - Benefit` green-highlighted tagline to each H3; restyled so each MONTH is one centered 800px white card containing its entries; added 6 emojis spread across months. Coming-next timeline updated to "late May 2026" honest-slip framing.
 - **Highlight pattern documented** in this PROJECT.md: emerald `--highlight: #10b981` CSS variable + `.highlight` utility class for emphasizing the load-bearing phrase in any paragraph. One per paragraph, never multiple.
 - **WRITING_STYLE.md broadened**: the "not just X, it's Y" rule expanded to forbid ALL "not X, it's Y" reframes regardless of the word "just." Caught after I shipped "This isn't a polished launch. It's me handing you..." in the first beta-page draft.
+- **Discovery (NOT fixed)**: `.spotlight-row.reverse` is broken on desktop — its `order: 1`/`order: 2` rules match source order, so they're a no-op. Result: all three spotlight rows currently render with phone-on-right (no alternation). The Kitsune row was probably meant to flip. Fix is a 2-line CSS swap (set `.reverse .spotlight-visual { order: 1 }` instead of 2). Logged in TODO below.
 
 ### April 7, 2026 — Phone Frame Component
 - Built CSS phone frame component (iPhone mockup with Dynamic Island)
