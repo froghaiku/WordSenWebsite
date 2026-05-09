@@ -13,6 +13,7 @@
   --text: #2d3748;
   --text-secondary: #4a5568;
   --text-muted: #718096;
+  --highlight: #10b981;
   --border: #f0e8e4;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
@@ -803,7 +804,11 @@ main { padding-top: var(--header-height); }
 }
 .entry-benefit {
   font-weight: 500;
-  color: #10b981;
+  color: var(--highlight);
+}
+.highlight {
+  color: var(--highlight);
+  font-weight: 500;
 }
 .entry-benefit::before {
   content: " - ";
