@@ -395,10 +395,9 @@ main { padding-top: var(--header-height); }
 .problem-section { padding: 3rem 0 4rem; }
 .problem-cycle-image {
   display: block;
-  max-width: 600px;
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  margin: 0 auto 2rem;
+  margin: 1.5rem auto;
 }
 .problem-content {
   max-width: 640px;
