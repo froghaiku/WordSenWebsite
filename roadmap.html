@@ -34,32 +34,32 @@ permalink: /roadmap/
 
             <div class="update-entry">
                 <h3>Charms</h3>
-                <p>Built a charm system. Before each study session you pick one of eight charms (if you have any) and it changes how you earn rewards for that session. Some give bonus koins. Some buff specific cards. One gives a chunky payout if you finish what you started. They drop after sessions, so you build up a collection over time. The end-of-session screen got a full visual rewrite to match.</p>
+                <p>Built a charm system where you pick one of eight charms before each study session and it changes how you earn rewards for that run.</p>
             </div>
 
             <div class="update-entry">
                 <h3>The trophy case</h3>
-                <p>The Word List used to look like a generic grid. Now mastered cards bear a kanji brushwork stamp tied to the level they came from. If you added an image to a card, it earns a red seal stamp on top of that. Scroll through 200 mastered cards months from now and you can SEE the work you put in. It's the wallpaper.</p>
+                <p>Mastered cards in the Word List now bear a kanji brushwork stamp tied to the level they came from, plus a red seal if you added an image.</p>
             </div>
 
             <div class="update-entry">
                 <h3>Offline mode that actually works</h3>
-                <p>Found a nasty bug where rating a card with no internet would silently hang the app. Fixed it properly. The Study button now blocks when you're offline (with a clear message), and audio for cards you've already heard plays from a local cache. So if you're on the subway, your previously studied cards still work.</p>
+                <p>Fixed a nasty bug where rating a card with no internet hung the app, and added an audio cache so previously studied cards still play on the subway.</p>
             </div>
 
             <div class="update-entry">
                 <h3>Better animations everywhere</h3>
-                <p>Reworked how rewards feel. Energy and koins now fly across the screen as little chips that land in their pills with a satisfying pulse. The progress bar fills with a snappy spring. Layered haptics for the rating buttons. The whole study loop feels MUCH more alive.</p>
+                <p>Energy and koins now fly across the screen as little chips that land in their pills with a satisfying pulse, and the rating buttons got layered haptics.</p>
             </div>
 
             <div class="update-entry">
                 <h3>WordList loads instantly</h3>
-                <p>It used to take 1-2 seconds to open the Word List. That was unacceptable. Tracked it down to a calculation that was running about 2 million times per render. Cached the result. Now it's instant.</p>
+                <p>Tracked down a calculation that was running 2 million times per render, cached the result, and the Word List now opens with zero wait.</p>
             </div>
 
             <div class="update-entry">
                 <h3>Hide and delete</h3>
-                <p>You can now hide cards from your study list (for built-in words you already know cold) or delete cards you created. Hidden cards keep their progress in case you want to bring them back later.</p>
+                <p>You can now hide built-in cards you already know cold, or delete cards you created yourself.</p>
             </div>
         </div>
 
@@ -69,32 +69,32 @@ permalink: /roadmap/
 
             <div class="update-entry">
                 <h3>The "MAX" energy fix</h3>
-                <p>If your energy was already maxed out, the app would still play the "+5 energy" animation when you finished a card. Felt dishonest. Now the pill just shows "MAX" and the animation only fires when energy actually goes up. Small change, but the kind of thing that adds up.</p>
+                <p>If your energy is maxed out, the pill now just shows MAX instead of faking a +5 animation that didn't actually do anything.</p>
             </div>
 
             <div class="update-entry">
                 <h3>Momentum celebration you can actually see</h3>
-                <p>The daily momentum hit had a tiny ring bump that nobody noticed. Now it's a full Balatro-style stamp with confetti and layered haptics. When you cross the line for the day, you KNOW.</p>
+                <p>The daily momentum hit got a Balatro-style stamp with confetti and layered haptics so you actually NOTICE when you cross the line for the day.</p>
             </div>
 
             <div class="update-entry">
                 <h3>Typing got fixed</h3>
-                <p>Bug reports, card reports, and Oracle notes all had the same problem: the cursor would disappear under the keyboard while you were typing. Rebuilt those screens so the keyboard plays nice. Typing feels responsive now.</p>
+                <p>Bug reports, card reports, and Oracle notes had a cursor-disappears-under-keyboard bug that's now completely fixed.</p>
             </div>
 
             <div class="update-entry">
                 <h3>New study header</h3>
-                <p>The top of the study screen used to be cluttered with progress info. Replaced it with a clean rainbow-arc progress ring and a display options menu (toggle furigana, romaji, English, image blur). Way less noise, easier to focus.</p>
+                <p>Replaced the cluttered study screen header with a clean rainbow-arc progress ring and a display options menu (toggle furigana, romaji, English, image blur).</p>
             </div>
 
             <div class="update-entry">
                 <h3>Smarter bug reports</h3>
-                <p>Submitting a bug report used to require two taps (one for the report, one for diagnostics). Now it auto-attaches the diagnostic data when you send the report. One tap, both signals. Way better for me when I'm trying to figure out what went wrong.</p>
+                <p>Bug reports now auto-attach diagnostic data when you send them, so I get the full picture from one tap instead of two.</p>
             </div>
 
             <div class="update-entry">
                 <h3>Cloud Functions live in production</h3>
-                <p>All six server-side functions are now running in production. Card creation, Oracle questions, audio generation, transcription, and the unlock pipeline all run on the cloud now. This makes everything faster AND more secure.</p>
+                <p>All six server-side functions are running in production, making card creation, Oracle, audio, and unlocks faster AND more secure.</p>
             </div>
         </div>
 
@@ -104,22 +104,22 @@ permalink: /roadmap/
 
             <div class="update-entry">
                 <h3>Card creation got FAST</h3>
-                <p>Moved the AI stuff to the cloud and card creation went from 15 seconds to about 4. That's a HUGE difference when you're trying to capture a word on the fly.</p>
+                <p>Moved the AI work to the cloud and card creation went from 15 seconds to about 4.</p>
             </div>
 
             <div class="update-entry">
                 <h3>Oracle learned to listen</h3>
-                <p>Redesigned the Oracle AI assistant. You can talk to it now instead of typing, and it has a personal notebook for saving what you learn. Two tabs: Ask and Notes. Clean and simple.</p>
+                <p>Redesigned the Oracle AI assistant so you can talk to it instead of typing, and gave it a personal notebook for saving what you learn.</p>
             </div>
 
             <div class="update-entry">
                 <h3>Browse your whole vocabulary</h3>
-                <p>Built a word list so you can actually see everything you're studying. Filter by status (up for review, in progress, mastered) and watch your progress grow through all 1,000 words.</p>
+                <p>Built a word list so you can see everything you're studying, with filters for review, in progress, and mastered.</p>
             </div>
 
             <div class="update-entry">
                 <h3>Security lockdown</h3>
-                <p>Did a full security audit. Database protection rules, encrypted storage, cleaned up logging. Not glamorous, but REALLY important before letting other people use the app.</p>
+                <p>Did a full security audit: database protection rules, encrypted storage, and cleaned up logging.</p>
             </div>
         </div>
 
@@ -129,12 +129,12 @@ permalink: /roadmap/
 
             <div class="update-entry">
                 <h3>Dango, mochi, and taiyaki</h3>
-                <p>Your Kitsune can eat three different treats now, each one giving a one-hour study buff. You can also pet your fox. Little hearts float up. It's adorable.</p>
+                <p>Your Kitsune can now eat three different treats (each one a one-hour study buff) and you can pet the fox to make little hearts float up.</p>
             </div>
 
             <div class="update-entry">
                 <h3>Hide and seek (but for koins)</h3>
-                <p>Added a mini-game where your fox sniffs out buried koins with a little celebration dance when it finds them. Spend the koins on furniture for the room.</p>
+                <p>Added a mini-game where your fox sniffs out buried koins with a little celebration dance when it finds them.</p>
             </div>
         </div>
 
@@ -144,7 +144,7 @@ permalink: /roadmap/
 
             <div class="update-entry">
                 <h3>The fox got smarter</h3>
-                <p>Rebuilt how the Kitsune moves around its room. It navigates furniture without getting stuck and looks way more natural. Also added close-up cameras for when you feed or pet it.</p>
+                <p>Rebuilt how the Kitsune moves around its room so it navigates furniture without getting stuck and looks way more natural.</p>
             </div>
         </div>
 
@@ -154,7 +154,7 @@ permalink: /roadmap/
 
             <div class="update-entry">
                 <h3>Furniture shopping!</h3>
-                <p>Added a store, an inventory system, and drag-and-drop room placement. Buy items with koins you earn from studying, then make your fox's room look however you want.</p>
+                <p>Added a store, an inventory, and drag-and-drop room placement so you can decorate the fox's room with koins you earned from studying.</p>
             </div>
         </div>
 
@@ -164,7 +164,7 @@ permalink: /roadmap/
 
             <div class="update-entry">
                 <h3>The Kitsune comes alive</h3>
-                <p>Imported the 3D fox model with full animations. Walking, running, idle, jumping. You can tap and swipe the camera around. This was the moment the app started feeling REAL.</p>
+                <p>Imported the 3D fox model with full animations (walking, running, idle, jumping) and this was the moment the app started feeling REAL.</p>
             </div>
         </div>
 
@@ -174,7 +174,7 @@ permalink: /roadmap/
 
             <div class="update-entry">
                 <h3>Flashcards that actually work</h3>
-                <p>Launched the core study experience. Spaced repetition, male and female audio, custom images, furigana on everything. This is the foundation the whole app is built on.</p>
+                <p>Launched the core study experience: spaced repetition, male and female audio, custom images, and furigana on everything.</p>
             </div>
         </div>
 
@@ -184,7 +184,7 @@ permalink: /roadmap/
 
             <div class="update-entry">
                 <h3>Say it and study it</h3>
-                <p>Added voice card creation. Record a word, WordSen figures out what you said, generates audio and an example sentence, adds it to your deck. This was the feature that made me decide to build the whole app.</p>
+                <p>Added voice card creation: record a word, WordSen figures out what you said, generates audio and an example sentence, and adds it to your deck.</p>
             </div>
         </div>
 
