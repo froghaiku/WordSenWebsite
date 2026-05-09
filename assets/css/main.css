@@ -393,6 +393,13 @@ main { padding-top: var(--header-height); }
    HOMEPAGE - PROBLEM
    ================================================ */
 .problem-section { padding: 3rem 0 4rem; }
+.problem-cycle-image {
+  display: block;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 2rem;
+}
 .problem-content {
   max-width: 640px;
   margin: 0 auto;
