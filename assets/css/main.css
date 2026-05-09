@@ -464,7 +464,7 @@ main { padding-top: var(--header-height); }
 .spotlight-section .container { max-width: 1080px; }
 .spotlight-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 360px;
   gap: 1.5rem;
   align-items: center;
   margin-bottom: 4rem;
