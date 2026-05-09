@@ -850,6 +850,32 @@ main { padding-top: var(--header-height); }
 /* ================================================
    BETA PAGE
    ================================================ */
+.beta-checklist { padding: 1rem 0 2rem; }
+.beta-checklist-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  width: max-content;
+}
+.beta-checklist-list li {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+.beta-checklist-list .check {
+  color: var(--highlight);
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1;
+}
 .beta-page { padding: 1rem 0 5rem; }
 .beta-signup { display: flex; justify-content: center; margin: 1rem 0 0.5rem; }
 .beta-signup-perk {
