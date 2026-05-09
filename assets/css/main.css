@@ -393,7 +393,10 @@ main { padding-top: var(--header-height); }
 /* ================================================
    HOMEPAGE - PROBLEM
    ================================================ */
-.problem-section { padding: 3rem 0 4rem; }
+.problem-section {
+  padding: 4rem 0;
+  background: var(--bg-card);
+}
 .problem-cycle-image {
   display: block;
   max-width: 100%;
@@ -403,10 +406,6 @@ main { padding-top: var(--header-height); }
 .problem-content {
   max-width: 640px;
   margin: 0 auto;
-  background: var(--bg-card);
-  padding: 2.5rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
 }
 .problem-content h2 { margin-bottom: 1.25rem; }
 .problem-punchline {
@@ -969,7 +968,6 @@ main { padding-top: var(--header-height); }
   .hero-image { order: -1; }
   .hero-image .app-screenshots { max-width: 360px; }
 
-  .problem-content { padding: 2rem; }
   .features-grid { grid-template-columns: 1fr; }
   .story-content { padding-left: 1.5rem; }
   .beta-cta-content { padding: 2rem; }
