@@ -473,7 +473,8 @@ main { padding-top: var(--header-height); }
 .spotlight-row.reverse .spotlight-visual { order: 2; }
 .spotlight-row.reverse .spotlight-text { order: 1; }
 .spotlight-text h3 {
-  font-size: 1.5rem;
+  font-size: 2.25rem;
+  line-height: 1.2;
   margin-bottom: 0.75rem;
 }
 .spotlight-text p {
