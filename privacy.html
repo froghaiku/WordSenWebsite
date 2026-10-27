@@ -1,14 +1,14 @@
 ---
 layout: default
 title: "Privacy Policy | WordSen"
-description: "How WordSen handles your data. The short version: we collect very little and don't sell anything."
+description: "How WordSen handles your data. The short version: I collect what the app needs to work, I name every company that touches it, and I don't sell any of it."
 permalink: /privacy/
 ---
 
 <section class="page-header">
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p>Last updated: April 2026</p>
+        <p>Last updated: October 26, 2026</p>
     </div>
 </section>
 
@@ -16,42 +16,98 @@ permalink: /privacy/
     <div class="container">
         <div class="privacy-body">
 
-            <p>I'll keep this simple. WordSen is a small, independent app built by one person (me, Ben). I'm not in the business of selling your data. I don't WANT your data, honestly, beyond what I need to make the app work and answer your emails.</p>
+            <p>I'll keep this simple. WordSen is a small, independent app built by one person (me, Ben, under the studio name Maple Kingdom). I'm not in the business of selling your data. I don't want your data, honestly, beyond what I need to make the app work and answer your emails. This page says exactly what the app and this website collect, which companies handle it, and what you can ask me to do with it.</p>
 
-            <h2>What I collect</h2>
+            <p>This policy covers the WordSen iOS app (including TestFlight beta builds) and the website at wordsen.com.</p>
 
-            <h3>If you sign up for the beta</h3>
-            <p>The beta signup form on this website is powered by Kit (formerly ConvertKit). When you enter your email, Kit stores it so I can send you updates about the beta launch. That's it. I won't spam you or share your email with anyone.</p>
+            <h2>The short version</h2>
+            <ul>
+                <li>Your study progress, your flashcards, and your fox's house are stored in your account so they survive a new phone.</li>
+                <li>A few features send a small piece of what you give them (a question, a voice clip, a photo of a word) to an AI service to get an answer. I name each one below, the app asks you first, and none of it is used to train their models.</li>
+                <li>I can see your account data in my admin tools so I can fix bugs and help you. I never sell it, share it for marketing, or show you ads.</li>
+                <li>Want it gone? Ask, and I delete it.</li>
+            </ul>
 
-            <h3>If you send me a message</h3>
-            <p>The contact form uses Formspree to deliver your message to my inbox. Formspree processes your name, email, and message so it can reach me. I use this info to reply to you and nothing else.</p>
+            <h2>What the app collects, and why</h2>
 
-            <h3>On this website</h3>
-            <p>This website doesn't use cookies or analytics tracking. I don't know who visits, how long they stay, or what pages they look at. The site loads Google Fonts for typography, which means Google's servers see your IP address when the fonts load. That's standard for most websites, but I want to be upfront about it.</p>
+            <h3>Your account</h3>
+            <p>When you first open WordSen you get an anonymous account automatically, so you can start studying without typing anything. If you later sign in with Apple, your account gets linked to the Apple ID and the email Apple gives me (which can be Apple's private relay address if you choose "Hide My Email"). I use the email to recover your progress and, rarely, to reply to you. Nothing else.</p>
 
-            <h3>In the app</h3>
-            <p>WordSen the app uses Firebase for authentication and data storage. Your study progress, flashcards, and Kitsune pet data are stored in Firebase under your account. I can see this data in the admin dashboard (for debugging and support), but I'm not analyzing it to sell you things or target you with ads. The app also uses PostHog for basic usage analytics (like which features people actually use) so I can make the app better.</p>
+            <h3>Your learning data</h3>
+            <p>Which words you've studied, how well you know them, the cards you create (including any photo you attach to a card and any notes you write), your momentum and streak history, your fox's name, its house and furniture, and your coin and Tama balances. This is the whole point of the app, and it's stored under your account so it syncs and survives reinstalls.</p>
 
-            <h2>What I DON'T do</h2>
+            <h3>Usage and crash data</h3>
+            <p>The app records basic usage such as how many cards you studied today, when you last opened it, and how many times you used the paid-for-me features (voice transcription, the Oracle). I use this to understand what people actually do and what the app costs to run. If the app crashes, a crash report goes to Firebase Crashlytics with your account ID, the device model, the iOS version, and the app's recent log lines, so I can find and fix it. Crash reporting is always on, because a crash I can't see is a crash I can't fix.</p>
+
+            <h3>Bug reports you send</h3>
+            <p>When you report a problem from inside the app, I receive your description, your account ID, the device model and iOS version, and, if you leave the switch on, the app's recent debug log so I can see what happened. The log is about what the app was doing, not what you were typing.</p>
+
+            <h3>TestFlight</h3>
+            <p>If you're a beta tester, Apple's TestFlight may also collect crash data and the feedback and screenshots you send through TestFlight itself. That goes through Apple under Apple's own privacy policy, and Apple shows it to me.</p>
+
+            <h2>AI features: what gets sent where</h2>
+            <p>Some features need a model that doesn't fit on a phone. For those, the app sends a small, specific piece of data to a company that runs the model, gets the answer, and that's it. The app asks for your permission before the first use of any of these. Here is each one:</p>
+            <ul>
+                <li><strong>Asking the Oracle a question.</strong> Your question and the recent back-and-forth in that conversation go to <strong>Anthropic</strong> (the makers of Claude) to write the answer.</li>
+                <li><strong>Speaking practice and voice input.</strong> The short audio clip you record goes to <strong>OpenAI</strong> (Whisper) to be turned into text. The clip is not kept by me after it's transcribed.</li>
+                <li><strong>Adding a word from a photo or pasted text.</strong> The cropped image or the text you highlighted goes to <strong>Anthropic</strong> so the app can read the Japanese and build the card. The image is passed straight through and discarded; I never store it or write it to logs.</li>
+                <li><strong>Example sentences.</strong> When a card needs a new sentence, the word itself goes to <strong>Anthropic</strong>. No personal data is involved.</li>
+            </ul>
+            <p>Both Anthropic and OpenAI state that data sent through their developer APIs is not used to train their models. Each may hold what was sent for a short time for abuse monitoring under its own privacy policy. I send them the minimum each feature needs, and never your name, email, or account details.</p>
+            <p>The voices you hear in the app are generated on my side with <strong>ElevenLabs</strong> from scripts I wrote. Nothing of yours is involved in that.</p>
+
+            <h2>What this website collects</h2>
+            <p>This website doesn't use cookies or analytics tracking. I don't know who visits, how long they stay, or what pages they look at. Three outside services are involved:</p>
+            <ul>
+                <li><strong>Beta signup.</strong> The signup form is powered by Kit (formerly ConvertKit). Your email is stored there so I can send you beta updates. Every email has an unsubscribe link.</li>
+                <li><strong>Contact form.</strong> Formspree delivers your name, email, and message to my inbox. I use it to reply and nothing else.</li>
+                <li><strong>Fonts.</strong> The site loads Google Fonts, which means Google's servers see your IP address when a page loads. That's standard for most websites, but I want to be upfront about it.</li>
+            </ul>
+
+            <h2>What I don't do</h2>
             <ul>
                 <li>Sell your data to anyone</li>
-                <li>Run targeted ads</li>
-                <li>Share your information with third parties for marketing</li>
-                <li>Track you across other websites</li>
+                <li>Show you ads or run targeted advertising</li>
+                <li>Share your information with third parties for their marketing</li>
+                <li>Track you across other apps or websites</li>
+                <li>Use your data to train AI models, or let anyone else do so</li>
             </ul>
 
-            <h2>Third-party services</h2>
-            <p>These services handle data on my behalf. Each has their own privacy policy:</p>
+            <h2>Who handles data on my behalf</h2>
+            <p>These companies process data so the app and website can work. Each has its own privacy policy, and each is bound to use the data only to provide its service to me:</p>
             <ul>
-                <li><strong>Firebase</strong> (Google) for app authentication and data storage</li>
-                <li><strong>Kit</strong> (ConvertKit) for beta email signups</li>
-                <li><strong>Formspree</strong> for contact form delivery</li>
-                <li><strong>PostHog</strong> for app usage analytics</li>
-                <li><strong>Google Fonts</strong> for website typography</li>
+                <li><strong>Firebase</strong> (Google): sign-in, the database that holds your account and learning data, storage for card photos, and crash reporting</li>
+                <li><strong>Apple</strong>: Sign in with Apple, TestFlight, and (once the app is on the App Store) in-app purchases. Apple handles payment; I never see your card number</li>
+                <li><strong>Anthropic</strong>: the Oracle, photo and text card capture, example sentences</li>
+                <li><strong>OpenAI</strong>: voice transcription</li>
+                <li><strong>ElevenLabs</strong>: generating the app's voices from my scripts (no user data)</li>
+                <li><strong>Kit</strong>: beta email list</li>
+                <li><strong>Formspree</strong>: contact form delivery</li>
+                <li><strong>Google Fonts</strong>: website typography</li>
+                <li><strong>Vercel</strong>: hosts this website and my admin dashboard</li>
+            </ul>
+            <p>Some of these companies run servers outside the country you live in, including the United States. By using WordSen you're okay with your data being processed there.</p>
+
+            <h2>How long I keep it</h2>
+            <p>Your account and learning data stay as long as your account exists, so your progress is there when you come back after a break. Bug reports and crash reports are kept until the bug is fixed and then cleaned out periodically. Audio clips and photos sent to AI services aren't stored by me at all. If you delete your account (see below), I delete your data within 30 days, except for a backup copy that cycles out on its own shortly after.</p>
+
+            <h2>Your choices and rights</h2>
+            <ul>
+                <li><strong>AI features are optional.</strong> You can study every card in the app without ever using the Oracle, voice input, or photo capture. If you decline the permission, those features stay off and nothing is sent.</li>
+                <li><strong>Delete your account and data.</strong> Right now the fastest way is to <a href="/contact/">message me</a> from the email on your account; I'll delete everything within 30 days and confirm. A delete button inside the app is coming before the App Store release.</li>
+                <li><strong>See or export your data.</strong> Ask and I'll send you a copy of what's stored under your account.</li>
+                <li><strong>Unsubscribe.</strong> Every beta email has a link at the bottom.</li>
+                <li><strong>Depending on where you live</strong> (for example the EU, UK, or California), you may have additional legal rights to access, correct, delete, or restrict the use of your data, and to complain to a data-protection authority. Email me and I'll honor them. I don't sell personal information and I don't discriminate against anyone for exercising their rights.</li>
             </ul>
 
-            <h2>Your choices</h2>
-            <p>You can unsubscribe from beta emails at any time (there's a link at the bottom of every email). If you want me to delete any data I have about you, just ask. Send me a message through the <a href="/contact/">contact page</a> and I'll take care of it.</p>
+            <h2>Children</h2>
+            <p>WordSen isn't directed at children under 13, and I don't knowingly collect personal information from anyone under 13. If you think a child has given me personal data, tell me and I'll delete it.</p>
+
+            <h2>Security</h2>
+            <p>Data travels over encrypted connections, access to your data is locked to your own account by Firebase security rules, and only I can see the admin side. No system is perfect, and I'd rather say that plainly than promise otherwise. If I ever find out your data was exposed, I'll tell you.</p>
+
+            <h2>Changes to this policy</h2>
+            <p>If I change how the app handles your data, I'll update this page and the date at the top, and the app will ask you to look at it again before continuing. Small wording fixes won't trigger that.</p>
 
             <h2>Questions?</h2>
             <p>If you have questions about any of this, <a href="/contact/">reach out</a>. I'm one person, not a legal department, so I'll give you a straight answer.</p>

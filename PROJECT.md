@@ -81,6 +81,8 @@ All paths relative to `assets/images/`. To activate: delete `<div class="phone-s
 
 ## Known Issues / TODO
 
+- **wordsen.com is on Lionic's "malicious website" list (found Oct 26 2026).** Quantum Fiber / CenturyLink gateways (Calix ProtectIQ, Lionic feed) kill the TLS handshake for every customer; Ben hit it the day he switched to Quantum Fiber, Steven in Seattle months earlier. The site itself is clean (remote fetches fine, Google Safe Browsing / Spamhaus / SURBL clean; maplekingdom.com on the same Vercel IP is not blocked). Own-network fix: Quantum Fiber app → Network Security → Security Threats → Add to approved sites. Everyone-else fix: Lionic false-positive form + VirusTotal check for other vendors (CRDF etc.) + Calix contact. Details and links in memory `reference_wordsen_domain_blocklist`. Oct 26: Lionic false-positive report FILED by Ben; wordsen.com approved in his own Quantum Fiber app. Still owed: VirusTotal check for other vendors (CRDF), re-check check.lionic.com every few days. OPEN until it says clean.
+
 - [ ] Record GIFs from real iPhone and drop into phone frames (5 placeholder spots still empty)
 - [ ] Old feature pages in `features/` — de-linked but still exist, decide whether to remove
 - [ ] Blog needs more content
