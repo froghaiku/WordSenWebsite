@@ -1,6 +1,18 @@
 {
   "buildCommand": "bundle exec jekyll build",
   "outputDirectory": "_site",
+  "redirects": [
+    {
+      "source": "/privacy",
+      "destination": "https://www.maplekingdom.com/privacy/",
+      "permanent": false
+    },
+    {
+      "source": "/privacy/",
+      "destination": "https://www.maplekingdom.com/privacy/",
+      "permanent": false
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
